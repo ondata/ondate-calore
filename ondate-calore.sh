@@ -15,7 +15,7 @@ data=$(date +%Y-%m-%d)
 # url pagina
 url="https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI"
 
-# download the page, if it does not return 200 exit
+# scarica la pagina, se non hai risposta 200 esci dallo script
 response=$(curl --write-out %{http_code} --silent --output /dev/null $url)
 
 if [ $response != 200 ]; then
