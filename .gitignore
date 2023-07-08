@@ -1,0 +1,23 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+/.history/
+
+# OS or Editor folders
+._*
+.cache
+.DS_Store
+Thumbs.db
+.bak
+
+tmp*
+
+/tmp/*
+/processing/*
