@@ -73,7 +73,7 @@ Se la vuoi incorporare nel tuo sito, puoi copiare il codice `HTML` di sotto.
 </script>
 ```
 
-![](immagini/ondate-calore.gif)
+[![](immagini/ondate-calore.gif)](https://www.datawrapper.de/_/elo50/)
 
 ## Estrazione dati
 
