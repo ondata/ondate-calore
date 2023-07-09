@@ -25,6 +25,17 @@ else
     curl $url -o $folder/processing/output.html
 fi
 
+# estrai data aggiornamento dichiarata sul sito
+<$folder/processing/output.html  scrape -e '//p[contains(text(), "Ultima versione aggiornata: ")]/b/text()' | sed -e 's/[[:space:]]//g' >$folder/processing/check
+
+# if file $folder/processing/check is equal to $folder/data/check, then exit
+if cmp -s $folder/processing/check $folder/data/check; then
+    echo "La data di aggiornamento non è cambiata. Lo script verrà interrotto."
+    exit 1
+else
+    mv $folder/processing/check $folder/data/check
+fi
+
 # estrai header, e converti data in formato ISO
 <$folder/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.th[]."#text"' | paste -sd, | sed -E 's#([0-9]{2})/([0-9]{2})/([0-9]{4})#\3-\2-\1#g' >$folder/processing/ondate-calore.csv
 
