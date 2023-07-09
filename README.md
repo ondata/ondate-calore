@@ -57,7 +57,7 @@ Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominat
 
 ## Note
 
-Nel sito dei bollettini si fa presente che:
+Nel [sito](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI) dei bollettini si fa presente che:
 
 - Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna (<http://www.arpa.emr.it/sim/external/pciv/bollettino_calore_pciv.php>)
 - Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte (<http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file>)
