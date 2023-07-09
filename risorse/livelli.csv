@@ -1,0 +1,5 @@
+livello,livello_descrizione
+Livello0,"Condizioni meteorologiche che non comportano rischi per la salute della popolazione"
+Livello1,"Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore"
+Livello2,"Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili"
+Livello3,"Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi"
