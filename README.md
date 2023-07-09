@@ -36,7 +36,7 @@ Sei **libero** di **usare** questi **dati** nel modo che preferisci, avendo cura
 A titolo d'esempio, è sufficiente indicare "[dati a cura dell'Associazione onData](https://github.com/ondata/ondate-calore)" (inserendo anche il link a [`https://github.com/ondata/ondate-calore`](https://github.com/ondata/ondate-calore)).
 
 La struttura dei dati è stata cambiata da `wide` a `long`, e le colonne con le date, sono diventata una sola colonna. Inoltre è stata aggiunta la colonna `data_estrazione` che riporta la data di estrazione.<br>
-Sono in formato `CSV`, il separatore dei campo è la `,` e la codifica dei caratteri è `UTF-8`.
+Sono in formato `CSV`, il separatore dei campi è la `,` e la codifica dei caratteri è `UTF-8`.
 
 Sotto qualche riga di esempio:
 
