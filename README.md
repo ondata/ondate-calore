@@ -74,3 +74,7 @@ Se la vuoi incorporare nel tuo sito, puoi copiare il codice `HTML` di sotto.
 ```
 
 ![](immagini/ondate-calore.gif)
+
+## Estrazione dati
+
+I dati sono estratti dalla pagina web del Ministero, con questo [script `bash`](ondate-calore.sh).
