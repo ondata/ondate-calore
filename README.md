@@ -54,3 +54,10 @@ Questa la descrizione dei campi:
 | `data_estrazione` | la data in cui i dati sono stati estratti | data in formato anno, mese giorno, AAAA-MM-GG |
 
 Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominato [`citta-anagrafica.csv`](data/citta-anagrafica.csv): contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).
+
+## Note
+
+Nel sito dei bollettini si fa presente che:
+
+- Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna (<http://www.arpa.emr.it/sim/external/pciv/bollettino_calore_pciv.php>)
+- Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte (<http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file>)
