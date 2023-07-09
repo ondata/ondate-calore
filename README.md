@@ -1,3 +1,10 @@
+- [Cosa è questo repo](#cosa-è-questo-repo)
+  - [I dati sui bollettini](#i-dati-sui-bollettini)
+  - [I dati estratti](#i-dati-estratti)
+  - [Note](#note)
+  - [Mappa](#mappa)
+  - [Estrazione dati](#estrazione-dati)
+
 # Cosa è questo repo
 
 Questo repo è stato creato per estrarre e archiviare i dati sui "[Bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI)", pubblicati dal Ministero della Salute.
@@ -25,6 +32,9 @@ Due file resi disponibili:
 
 - [`ondate-calore_latest.csv`](data/ondate-calore_latest.csv), con gli ultimi dati estratti;
 - [`ondate-calore_archivio.csv`](data/ondate-calore_archivio.csv), con l'archivio dei dati estratti, a partire da giorno 8 luglio 2023.
+
+Sei **libero** di **usare** questi **dati** nel modo che preferisci, avendo cura di **citare** la **fonte**: la **licenza** scelta è la [`CC-BY-4.0`](https://creativecommons.org/licenses/by/4.0/deed.it) (Creative Commons Attribution 4.0 International).<br>
+A titolo d'esempio, è sufficiente indicare "[dati a cura dell'Associazione onData](https://github.com/ondata/ondate-calore)" (inserendo anche il link a `https://github.com/ondata/ondate-calore`).
 
 La struttura dei dati è stata cambiata da `wide` a `long`, e le colonne con le date, sono diventata una sola colonna. Inoltre è stata aggiunta la colonna `data_estrazione` che riporta la data di estrazione.<br>
 Sono in formato `CSV`, il separatore dei campo è la `,` e la codifica dei caratteri è `UTF-8`.
