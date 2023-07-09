@@ -45,8 +45,15 @@ else
     # estrai dati
     <$folder/processing/output.html scrape -be '//tr[@class="grigio-05-bg"]' | xq -c '.html.body.tr[]|{name:.td[0].span.a."@name",prima:.td[1].img."@alt",seconda:.td[2].img."@alt",terza:.td[3].img."@alt"}'  | mlr --j2c cat | tail -n +2 >>$folder/processing/ondate-calore.csv
 
+    <$folder/processing/output.html scrape -be '//tr[@class="grigio-05-bg"]' | xq -c '.html.body.tr[]|{name:.td[0].span.a."@name",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL >$folder/data/ondate-calore_PDF.csv
+
     # trasforma struttura dati da wide a long
     mlr --csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data  -f citta then put '$data_estrazione="'"$data"'"' $folder/processing/ondate-calore.csv >$folder/data/ondate-calore_latest.csv
+
+    # aggiungi URL PDF
+    mlr --csv join --ul -j citta -f $folder/data/ondate-calore_latest.csv then unsparsify $folder/data/ondate-calore_PDF.csv >$folder/processing/tmp.csv
+
+    mv $folder/processing/tmp.csv $folder/data/ondate-calore_latest.csv
 
     # se il file di archivio non esiste, crea un file vuoto
     if [ ! -f $folder/data/ondate-calore_archivio.csv ]; then
@@ -54,7 +61,7 @@ else
     fi
 
     # unisci gli ultimi dati con il file di archivio
-    mlr --csv uniq -a then sort -r data  -f citta $folder/data/ondate-calore_latest.csv $folder/data/ondate-calore_archivio.csv >$folder/processing/tmp.csv
+    mlr --csv cut -x -f URL then uniq -a then sort -r data -f citta $folder/data/ondate-calore_latest.csv $folder/data/ondate-calore_archivio.csv >$folder/processing/tmp.csv
     mv $folder/processing/tmp.csv $folder/data/ondate-calore_archivio.csv
 
     # estrai un CSV, con i dati di oggi, se presenti
