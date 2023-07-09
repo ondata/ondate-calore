@@ -33,7 +33,7 @@ Due file resi disponibili:
 - [`ondate-calore_archivio.csv`](data/ondate-calore_archivio.csv), con l'archivio dei dati estratti, a partire da giorno 8 luglio 2023.
 
 Sei **libero** di **usare** questi **dati** nel modo che preferisci, avendo cura di **citare** la **fonte**: la **licenza** scelta è la [`CC-BY-4.0`](https://creativecommons.org/licenses/by/4.0/deed.it) (Creative Commons Attribution 4.0 International).<br>
-A titolo d'esempio, è sufficiente indicare "[dati a cura dell'Associazione onData](https://github.com/ondata/ondate-calore)" (inserendo anche il link a `https://github.com/ondata/ondate-calore`).
+A titolo d'esempio, è sufficiente indicare "[dati a cura dell'Associazione onData](https://github.com/ondata/ondate-calore)" (inserendo anche il link a [`https://github.com/ondata/ondate-calore`](https://github.com/ondata/ondate-calore)).
 
 La struttura dei dati è stata cambiata da `wide` a `long`, e le colonne con le date, sono diventata una sola colonna. Inoltre è stata aggiunta la colonna `data_estrazione` che riporta la data di estrazione.<br>
 Sono in formato `CSV`, il separatore dei campo è la `,` e la codifica dei caratteri è `UTF-8`.
