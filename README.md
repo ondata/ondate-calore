@@ -1,15 +1,14 @@
-- [Cosa è questo repo](#cosa-è-questo-repo)
-  - [I dati sui bollettini](#i-dati-sui-bollettini)
-  - [I dati estratti](#i-dati-estratti)
-  - [Note](#note)
-  - [Mappa](#mappa)
-  - [Estrazione dati](#estrazione-dati)
-
-# Cosa è questo repo
+# Cosa è questo repo <!-- omit in toc -->
 
 Questo repo è stato creato per estrarre e archiviare i dati sui "[Bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI)", pubblicati dal Ministero della Salute.
 
 > Per comunicare i possibili effetti sulla salute delle ondate di calore il ministero elabora dei bollettini giornalieri per 27 città con previsioni a 24, 48 e 72 ore.
+
+- [I dati sui bollettini](#i-dati-sui-bollettini)
+- [I dati estratti](#i-dati-estratti)
+- [Note](#note)
+- [Mappa](#mappa)
+- [Estrazione dati](#estrazione-dati)
 
 ## I dati sui bollettini
 
