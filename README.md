@@ -12,10 +12,10 @@ Sono pubblicati in una tabella HTML, in cui una colonna contiene i nomi delle ci
 
 Quattro [livelli di rischio](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp?lingua=italiano&id=2506&area=emergenzaCaldo&menu=vuoto):
 
-- **Livello 0**, Condizioni meteorologiche che non comportano rischi per la salute della popolazione.
-- **Livello 1**, Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore.
-- **Livello 2**, Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili.
-- **Livello 3**, Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi.
+- **Livello 0**, condizioni meteorologiche che non comportano rischi per la salute della popolazione.
+- **Livello 1**, pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore.
+- **Livello 2**, temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili.
+- **Livello 3**, ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi.
 
 ## I dati estratti
 
