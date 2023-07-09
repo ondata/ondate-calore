@@ -19,7 +19,7 @@ Quattro [livelli di rischio](https://www.salute.gov.it/portale/caldo/dettaglioCo
 
 ## I dati estratti
 
-I dati sono **estratti ogni mattina alle 6:00** e pubblicati nella cartella [`data`](data).
+I dati sono (al momento) **estratti ogni 4 ore** e pubblicati nella cartella [`data`](data).
 
 Due file resi disponibili:
 
@@ -53,4 +53,4 @@ Questa la descrizione dei campi:
 | `livello` | il livello di rischio per quella città in quel giorno | testo |
 | `data_estrazione` | la data in cui i dati sono stati estratti | data in formato anno, mese giorno, AAAA-MM-GG |
 
-Il file [`citta-anagrafica.csv`](data/citta-anagrafica.csv) contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).
+Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominato [`citta-anagrafica.csv`](data/citta-anagrafica.csv): contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).
