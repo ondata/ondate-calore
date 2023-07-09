@@ -52,3 +52,11 @@ else
     mv $folder/processing/tmp.csv $folder/data/ondate-calore_archivio.csv
 fi
 
+mlr --c2n cut -f data then uniq -a "$folder"/data/ondate-calore_latest.csv | while read -r line; do
+    if [[ $line == *"$data"* ]]; then
+        mlr --csv join --ul -j citta -f "$folder"/data/ondate-calore_latest.csv then unsparsify then filter '$data=="'"$data"'"' "$folder"/data/citta-anagrafica.csv >"$folder"/data/ondate-calore_oggi.csv
+    else
+        echo "non contiene la stringa $data"
+    fi
+done
+
