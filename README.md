@@ -73,7 +73,7 @@ Nel [sito](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=it
 
 ## Mappa
 
-Su datawrapper è stata pubblicata [questa mappa](https://www.datawrapper.de/_/elo50/), a partire dai dati estratti dal ministero.
+Su datawrapper è stata pubblicata [questa mappa](https://www.datawrapper.de/_/elo50/), a partire dai dati estratti dal sito del ministero.
 
 Se la vuoi incorporare nel tuo sito, puoi copiare il codice `HTML` di sotto.
 
