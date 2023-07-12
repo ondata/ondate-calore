@@ -77,3 +77,9 @@ mlr --c2n cut -f data then uniq -a "$folder"/data/ondate-calore_latest.csv | whi
     fi
 done
 
+# calcola le variazioni per fare rappresentazioni grafiche che ne tengano conto
+
+# per prima cosa, visto che può capitare che estrazioni dati fatte in giorni differenti, producano livelli diversi, a parità di città e data di previsione (non estrazione) estraggo il livello per la data di estrazione più recente
+
+# con miller 5 il top lavora solo su numeri, quindi devo convertire "data" in numero
+# mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta ondate-calore_archivio.csv
