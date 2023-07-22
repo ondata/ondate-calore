@@ -86,7 +86,15 @@ mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazi
 
 mlr --csv cut -f citta,data,delta_giorno_prima,delta_giorno_dopo "$folder"/elaborazioni/ondate-calore_archivio_clean.csv >"$folder"/processing/tmp.csv
 
-mlr --csv join --ul -j citta,data -f "$folder"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
+mlr --csv join --ul -j citta,data -f "$folder"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data then put '
+if($delta_giorno_dopo>0) {
+    $tooltip_domani="si sta peggio ⬆️"
+} elif ($delta_giorno_dopo<0) {
+    $tooltip_domani="si sta meglio ⬇️"
+} else {
+    $tooltip_domani="non cambia ↔️"
+}
+' "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
 
 rm "$folder"/processing/tmp.csv
 
