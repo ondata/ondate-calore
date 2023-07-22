@@ -88,11 +88,11 @@ mlr --csv cut -f citta,data,delta_giorno_prima,delta_giorno_dopo "$folder"/elabo
 
 mlr --csv join --ul -j citta,data -f "$folder"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data then put '
 if($delta_giorno_dopo>0) {
-    $tooltip_domani="si sta peggio ⬆️"
+    $tooltip_domani="si starà peggio ⬆️"
 } elif ($delta_giorno_dopo<0) {
-    $tooltip_domani="si sta meglio ⬇️"
+    $tooltip_domani="si starà meglio ⬇️"
 } else {
-    $tooltip_domani="non cambia ↔️"
+    $tooltip_domani="sarà come oggi"
 }
 ' "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
 
