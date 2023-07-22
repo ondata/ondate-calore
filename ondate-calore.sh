@@ -13,8 +13,9 @@ set -o pipefail
 
 folder="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-mkdir -p $folder/processing
-mkdir -p $folder/data
+mkdir -p "$folder"/processing
+mkdir -p "$folder"/data
+mkdir -p "$folder"/elaborazioni
 
 data=$(date +%Y-%m-%d)
 
@@ -77,9 +78,15 @@ mlr --c2n cut -f data then uniq -a "$folder"/data/ondate-calore_latest.csv | whi
     fi
 done
 
-# calcola le variazioni per fare rappresentazioni grafiche che ne tengano conto
+# Se risultano associati più valori in un giorno, per la stessa città, prendi il più recente
+# Estrai un CSV, che per ogni riga stampa il delta rispetto a ieri e a domani
+mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta then rename livello_n_delta,delta_giorno_prima then step -a shift_lead -f delta_giorno_prima -g citta then rename -r '.+_lead',delta_giorno_dopo then sort -f citta,data "$folder"/data/ondate-calore_archivio.csv >"$folder"/elaborazioni/ondate-calore_archivio_clean.csv
 
-# per prima cosa, visto che può capitare che estrazioni dati fatte in giorni differenti, producano livelli diversi, a parità di città e data di previsione (non estrazione) estraggo il livello per la data di estrazione più recente
+# aggiungi ai dati di oggi i delta rispetto a ieri e a domani
 
-# con miller 5 il top lavora solo su numeri, quindi devo convertire "data" in numero
-# mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta ondate-calore_archivio.csv
+mlr --csv cut -f citta,data,delta_giorno_prima,delta_giorno_dopo "$folder"/elaborazioni/ondate-calore_archivio_clean.csv >"$folder"/processing/tmp.csv
+
+mlr --csv join --ul -j citta,data -f "$folder"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
+
+rm "$folder"/processing/tmp.csv
+
