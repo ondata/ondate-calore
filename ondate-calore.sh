@@ -93,7 +93,14 @@ if($delta_giorno_dopo>0) {
     $tooltip_domani="👀 <b>Domani</b> si starà meglio ⬇️"
 } else {
     $tooltip_domani="👀 <b>Domani</b> sarà come oggi"
-};if(is_null($delta_giorno_dopo)){$tooltip_domani=""}else{$tooltip_domani=$tooltip_domani}' "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
+};if(is_null($delta_giorno_dopo)){$tooltip_domani=""}else{$tooltip_domani=$tooltip_domani}
+' "$folder"/processing/tmp.csv >"$folder"/elaborazioni/ondate-calore_oggi.csv
 
-rm "$folder"/processing/tmp.csv
+mlr --csv  cut -f citta,latitude "$folder"/data/citta-anagrafica.csv > "$folder"/processing/latitude.csv
+
+mlr --csv join --ul -j citta -f "$folder"/elaborazioni/ondate-calore_archivio_clean.csv then unsparsify then sort -f citta,data "$folder"/processing/latitude.csv >"$folder"/processing/tmp.csv
+
+rm "$folder"/processing/latitude.csv
+
+mv "$folder"/processing/tmp.csv "$folder"/elaborazioni/ondate-calore_archivio_clean.csv
 
