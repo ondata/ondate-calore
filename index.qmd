@@ -1,5 +1,11 @@
 ---
 title: "Introduzione"
+twitter-card:
+  description: "Tante novità sui dati pubblicati su Italiadomani"
+  image: "/immagini/bollettini-ondate-calore-og.png"
+open-graph:
+  description: "Tante novità sui dati pubblicati su Italiadomani"
+  image: "/immagini/bollettini-ondate-calore-og.png"
 ---
 
 Il Ministero della Salute pubblica dal 15 maggio i [bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI).
