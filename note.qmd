@@ -1,0 +1,23 @@
+---
+title: "Note"
+---
+
+Il 12 luglio 2023 abbiamo scritto questa PEC ai responsabili della pubblicazione di questi bollettini:
+
+> Buongiorno,<br>
+vi scriviamo per chiedervi di pubblicare le informazioni sui "Bollettini sulle ondate di calore", anche come dati leggibili meccanicamente.
+> La pubblicazione dei dati in formato aperto e riutilizzabile è in linea con l'[articolo 2](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2006-01-24;36~art2) del "Decreto legislativo 24 gennaio 2006, n. 36", e soprattutto può offrire diverse opportunità di approfondimento, ricerca e studio per ricercatori, giornalisti e persone interessate.
+>
+> Al momento queste informazioni risultano pubblicate in pagine HTML e come applicazione per smartphone, ma non sono disponibili anche i dati grezzi o API (in formati come il CSV, JSON, ecc.).
+>
+> Chiediamo dunque la pubblicazione dei **dati grezzi** sia della **tabella di sintesi dei bollettini** (presente [qui](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI)), sia **i dati di dettaglio** inseriti nei singoli bollettini PDF delle 27 città e visibili nella app per smartphone (con le temperature stimate alle 8:00, alle 12:00 e con la massima percepita).<br>
+>Chiediamo inoltre di mantenere pubblica la serie storica di dati che raccogliete tra maggio e settembre.
+
+Inoltre abbiamo fatto presente che:
+
+  - gli URL dei bollettini in PDF sono in **HTTP** e **non** in **HTTPS**. Questo è bloccante per il download, per alcuni browser;
+  - sul sito non vediamo una nota sui **criteri** di **scelta delle città**. L'abbiamo recuperata sulla [circolare del Ministero](https://www.trovanorme.salute.gov.it/norme/renderNormsanPdf?anno=2023&codLeg=93738&parte=1%20&serie=null), ma andrebbe palesata anche sul sito dedicato.
+
+## Licenza
+
+La licenza scelta è la [`CC-BY-4.0`](https://creativecommons.org/licenses/by/4.0/deed.it) (Creative Commons Attribution 4.0 International). Quindi sei libero di usare come preferisci i dati estratti, avendo cura di citare la fonte.

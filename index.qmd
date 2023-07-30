@@ -1,0 +1,72 @@
+---
+title: "Introduzione"
+---
+
+Il Ministero della Salute pubblica dal 15 maggio i [bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI).
+
+> La pubblicazione dei bollettini sul Portale è attiva ogni anno da maggio a settembre. I bollettini vengono aggiornati dal lunedì al venerdì, alle ore 11 e sono consultabili anche dalla App "Caldo e Salute", disponibile per dispositivi Android su Google Play.
+
+
+Quattro [livelli di rischio](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp?lingua=italiano&id=2506&area=emergenzaCaldo&menu=vuoto):
+
+-   **Livello 0** (in verde), condizioni meteorologiche che non comportano rischi per la salute della popolazione.
+-   **Livello 1** (in giallo), pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore.
+-   **Livello 2** (in arancione), temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili.
+-   **Livello 3** (in rosso), ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi.
+
+Sono **27** le **città** per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in [questa circolare del Ministero](https://www.trovanorme.salute.gov.it/norme/renderNormsanPdf?anno=2023&codLeg=93738&parte=1%20&serie=null): i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.
+
+::: {.column-margin}
+Non abbiamo verificato se questo filtro sia ad oggi coerente con quanto pubblicato.
+:::
+
+Questi dati **non sono disponibili** in formato leggibile meccanicamente (`CSV`, `JSON`, ecc.), **ma soltanto come tabella HTML** (che viene aggiornata tipicamente dal lunedì al venerdì nella mattinata) **e come PDF**.
+
+Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorno automaticamente e li pubblica automaticamente su [questo *repository* GitHub](https://github.com/ondata/ondate-calore).<br>
+A partire dai [dati estratti](#dati) abbiamo creato una [mappa](#mappa-dei-bollettini) e un [calendario](#calendario-dei-bollettini) dei bollettini.
+
+
+# Mappa dei bollettini
+
+Abbiamo pubblicato [questa mappa](https://www.datawrapper.de/_/elo50/) su datawrapper, che si aggiorna automaticamente ogni giorno.
+
+<div style="min-height:812px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/elo50/embed.js?v=29" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/elo50/full.png" alt="" /></noscript></div>
+
+Se la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
+
+```html
+<div style="min-height:812px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/elo50/embed.js?v=29" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/elo50/full.png" alt="" /></noscript></div>
+```
+
+# Calendario dei bollettini
+
+Stiamo raccogliendo i dati che vengono pubblicati nel tempo, in modo da poter produrre una visualizzazione di insieme nel tempo. In questa vista a calendario - creata con [Observable Plot](https://observablehq.com/plot/) - gli ultimi 15 giorni di dati disponibili (compresi, se disponibili, i dati previsti per i giorni successivi).<br>
+I nomi delle città sono ordinati dall'alto verso il basso, a partire da quella più a nord, verso quella più a sud (è un'idea di [Dennis Angemi](https://twitter.com/DennisAngemi), grazie).
+
+<iframe width="100%" height="706" frameborder="0"
+  src="https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario"></iframe>
+
+Se lo vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
+
+```html
+<iframe width="100%" height="706" frameborder="0"
+  src="https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario"></iframe>
+```
+
+# Dati
+
+Questi i dati principali resi disponibili:
+
+- [`ondate-calore_latest.csv`](https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_latest.csv), con gli ultimi dati estratti;
+- [`ondate-calore_archivio.csv`](https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_archivio.csv), con l'archivio dei dati estratti, a partire da giorno 8 luglio 2023.
+
+Questa la descrizione dei campi:
+
+| campo | descrizione | tipo |
+| --- | --- | --- |
+| `citta` | il nome della città | testo |
+| `data` | la data riportata nel bollettino | data in formato anno, mese giorno, AAAA-MM-GG |
+| `livello` | il livello di rischio per quella città in quel giorno | testo |
+| `data_estrazione` | la data in cui i dati sono stati estratti | data in formato anno, mese giorno, AAAA-MM-GG |
+
+Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominato [`citta-anagrafica.csv`](https://github.com/ondata/ondate-calore/blob/main/data/citta-anagrafica.csv): contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).

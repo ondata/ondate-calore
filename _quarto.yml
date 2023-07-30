@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Bollettini sulle ondate di calore"
+  open-graph:
+    locale: it_IT
+  twitter-card:
+    creator: "@ondatait"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - note.qmd
+
+
+  page-footer:
+    border: true
+    left: "a cura di [onData](https://www.ondata.it/)"
+    right:
+      - icon: github
+        href: https://github.com/ondata/ondate-calore
+    center: "[Licenza](/note.qmd#licenza)"
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+#    link-external-newwindow: true
+#    link-external-filter: '^.*pnrr\.datibenecomune\.it\/'
+    lang: "it-IT"
+

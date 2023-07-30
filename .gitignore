@@ -21,3 +21,5 @@ tmp*
 
 /tmp/*
 /processing/*
+
+/.quarto/
