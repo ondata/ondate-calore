@@ -30,7 +30,7 @@ Non abbiamo verificato se questo filtro sia ad oggi coerente con quanto pubblica
 
 Questi dati **non sono disponibili** in formato leggibile meccanicamente (`CSV`, `JSON`, ecc.), **ma soltanto come tabella HTML** (che viene aggiornata tipicamente dal lunedì al venerdì nella mattinata) **e come PDF**.
 
-Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorno automaticamente e li pubblica automaticamente su [questo *repository* GitHub](https://github.com/ondata/ondate-calore).<br>
+Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorno li pubblica,  automaticamente, su [questo *repository* GitHub](https://github.com/ondata/ondate-calore).<br>
 A partire dai [dati estratti](#dati) abbiamo creato una [mappa](#mappa-dei-bollettini) e un [calendario](#calendario-dei-bollettini) dei bollettini.
 
 
