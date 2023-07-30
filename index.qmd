@@ -10,7 +10,7 @@ open-graph:
   image: "/immagini/bollettini-ondate-calore-og.png"
 ---
 
-Il Ministero della Salute pubblica dal 15 maggio i [bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI).
+Il Ministero della Salute pubblica - da alcuni anni - a partire dal 15 maggio i [bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI).
 
 > La pubblicazione dei bollettini sul Portale è attiva ogni anno da maggio a settembre. I bollettini vengono aggiornati dal lunedì al venerdì, alle ore 11 e sono consultabili anche dalla App "Caldo e Salute", disponibile per dispositivi Android su Google Play.
 
