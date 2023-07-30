@@ -1,8 +1,11 @@
 project:
   type: website
   output-dir: docs
+  resources:
+  - "immagini/bollettini-ondate-calore-og.png"
 
 website:
+  site-url: "https://ondata.github.io/ondate-calore"
   title: "Bollettini sulle ondate di calore"
   open-graph:
     locale: it_IT
