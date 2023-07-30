@@ -1,10 +1,12 @@
 ---
 title: "Introduzione"
 twitter-card:
-  description: "Tante novità sui dati pubblicati su Italiadomani"
+  title: "Bollettini sulle ondate di calore"
+  description: "L'estrazione giornaliera dei dati pubblicati dal Ministero della Salute"
   image: "/immagini/bollettini-ondate-calore-og.png"
 open-graph:
-  description: "Tante novità sui dati pubblicati su Italiadomani"
+  title: "Bollettini sulle ondate di calore"
+  description: "L'estrazione giornaliera dei dati pubblicati dal Ministero della Salute"
   image: "/immagini/bollettini-ondate-calore-og.png"
 ---
 
