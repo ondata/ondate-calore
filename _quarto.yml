@@ -1,11 +1,16 @@
 project:
   type: website
   output-dir: docs
+  render:
+  - "*.qmd"
+  - "!LICENSE.md"
   resources:
   - "immagini/bollettini-ondate-calore-og.png"
 
 website:
   site-url: "https://ondata.github.io/ondate-calore"
+  search: false
+  back-to-top-navigation: true
   title: "Bollettini sulle ondate di calore"
   open-graph:
     locale: it_IT
