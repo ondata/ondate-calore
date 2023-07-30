@@ -34,7 +34,7 @@ format:
     toc: true
     code-copy: true
     code-overflow: wrap
-#    link-external-newwindow: true
-#    link-external-filter: '^.*pnrr\.datibenecomune\.it\/'
+    link-external-newwindow: true
+    link-external-filter: '^.*ondata\.github\.io/ondate-calore'
     lang: "it-IT"
 
