@@ -28,9 +28,9 @@ Sono **27** le **città** per le quali vengono pubblicati i bollettini. Il crite
 Non abbiamo verificato se questo filtro sia coerentemente applicato. Certamente non c'è alcuna città della Basilicata.
 :::
 
-Questi dati **non sono disponibili** in formato leggibile meccanicamente (`CSV`, `JSON`, ecc.), **ma soltanto come tabella HTML** (che viene aggiornata tipicamente dal lunedì al venerdì nella mattinata) **e come PDF**.
+Questi dati **non sono disponibili** in formato leggibile meccanicamente (`CSV`, `JSON`, ecc.), **ma soltanto come tabella HTML** e come **PDF**.
 
-Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorno li pubblica,  automaticamente, su [questo *repository* GitHub](https://github.com/ondata/ondate-calore).<br>
+Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorno e li pubblica, su [questo *repository* GitHub](https://github.com/ondata/ondate-calore).<br>
 A partire dai [dati estratti](#dati) abbiamo creato una [mappa](#mappa-dei-bollettini) e un [calendario](#calendario-dei-bollettini) dei bollettini.
 
 
