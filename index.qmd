@@ -77,4 +77,6 @@ Questa la descrizione dei campi:
 | `livello` | il livello di rischio per quella città in quel giorno | testo |
 | `data_estrazione` | la data in cui i dati sono stati estratti | data in formato anno, mese giorno, AAAA-MM-GG |
 
+: Schema dati {.responsive .striped}
+
 Oltre questi due file, è reso disponibile un file di "anagrafica" denominato [`citta-anagrafica.csv`](https://github.com/ondata/ondate-calore/blob/main/data/citta-anagrafica.csv): contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).
