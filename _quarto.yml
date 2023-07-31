@@ -11,17 +11,17 @@ website:
   site-url: "https://ondata.github.io/ondate-calore"
   search: false
   back-to-top-navigation: true
-  title: "Bollettini sulle ondate di calore"
+  title: "I dati sui bollettini sulle ondate di calore"
   open-graph:
     locale: it_IT
   twitter-card:
     creator: "@ondatait"
   navbar:
+    title: false
     left:
       - href: index.qmd
         text: Home
       - note.qmd
-
 
   page-footer:
     border: true
