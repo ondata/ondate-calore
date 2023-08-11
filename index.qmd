@@ -34,7 +34,7 @@ Allora giorno 8 luglio 2023 abbiamo creato uno *script* che li estrae ogni giorn
 A partire dai [dati estratti](#dati) abbiamo creato una [mappa](#mappa-dei-bollettini) e un [calendario](#calendario-dei-bollettini) dei bollettini.
 
 
-# Mappa dei bollettini
+## Mappa dei bollettini
 
 Abbiamo pubblicato [questa mappa](https://www.datawrapper.de/_/elo50/) su datawrapper, che si aggiorna automaticamente ogni giorno.
 
@@ -46,7 +46,7 @@ Se la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
 <div style="min-height:812px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/elo50/embed.js?v=29" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/elo50/full.png" alt="" /></noscript></div>
 ```
 
-# Calendario dei bollettini
+## Calendario dei bollettini
 
 Stiamo raccogliendo i dati che vengono pubblicati nel tempo, in modo da poter produrre una visualizzazione di insieme nel tempo. In questa vista a calendario - creata con [Observable Plot](https://observablehq.com/plot/) - gli ultimi 15 giorni di dati disponibili (compresi, se disponibili, i dati previsti per i giorni successivi).<br>
 I nomi delle città sono ordinati dall'alto verso il basso, a partire da quella più a nord, verso quella più a sud (è un'idea di [Dennis Angemi](https://twitter.com/DennisAngemi), grazie).
@@ -61,7 +61,7 @@ Se lo vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
   src="https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario"></iframe>
 ```
 
-# Dati
+## Dati
 
 Questi i dati principali resi disponibili:
 

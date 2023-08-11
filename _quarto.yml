@@ -25,7 +25,7 @@ website:
 
   page-footer:
     border: true
-    left: "a cura di [onData](https://www.ondata.it/)"
+    left: "a cura di [onData](https://www.ondata.it/) (fatto con [Quarto](https://quarto.org/))"
     right:
       - icon: github
         href: https://github.com/ondata/ondate-calore
@@ -42,4 +42,5 @@ format:
     link-external-newwindow: true
     link-external-filter: '^.*ondata\.github\.io/ondate-calore'
     lang: "it-IT"
+    anchor-sections: true
 

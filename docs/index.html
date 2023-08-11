@@ -179,8 +179,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Non abbiamo verificato se questo filtro sia coerentemente applicato. Certamente non c’è alcuna città della Basilicata.</p>
 </div></div><p>Questi dati <strong>non sono disponibili</strong> in formato leggibile meccanicamente (<code>CSV</code>, <code>JSON</code>, ecc.), <strong>ma soltanto come tabella HTML</strong> e come <strong>PDF</strong>.</p>
 <p>Allora giorno 8 luglio 2023 abbiamo creato uno <em>script</em> che li estrae ogni giorno e li pubblica, su <a href="https://github.com/ondata/ondate-calore">questo <em>repository</em> GitHub</a>.<br> A partire dai <a href="#dati">dati estratti</a> abbiamo creato una <a href="#mappa-dei-bollettini">mappa</a> e un <a href="#calendario-dei-bollettini">calendario</a> dei bollettini.</p>
-<section id="mappa-dei-bollettini" class="level1">
-<h1>Mappa dei bollettini</h1>
+<section id="mappa-dei-bollettini" class="level2">
+<h2 class="anchored" data-anchor-id="mappa-dei-bollettini">Mappa dei bollettini</h2>
 <p>Abbiamo pubblicato <a href="https://www.datawrapper.de/_/elo50/">questa mappa</a> su datawrapper, che si aggiorna automaticamente ogni giorno.</p>
 <div style="min-height:812px">
 <script type="text/javascript" defer="" src="https://datawrapper.dwcdn.net/elo50/embed.js?v=29" charset="utf-8"></script>
@@ -191,8 +191,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Se la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">style</span><span class="ot">=</span><span class="st">"min-height:812px"</span><span class="kw">&gt;&lt;script</span><span class="ot"> type=</span><span class="st">"text/javascript"</span> <span class="er">defer</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://datawrapper.dwcdn.net/elo50/embed.js?v=29"</span> <span class="er">charset</span><span class="ot">=</span><span class="st">"utf-8"</span><span class="kw">&gt;&lt;/script&gt;&lt;noscript&gt;&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://datawrapper.dwcdn.net/elo50/full.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">""</span> <span class="kw">/&gt;&lt;/noscript&gt;&lt;/div&gt;</span></span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="calendario-dei-bollettini" class="level1">
-<h1>Calendario dei bollettini</h1>
+<section id="calendario-dei-bollettini" class="level2">
+<h2 class="anchored" data-anchor-id="calendario-dei-bollettini">Calendario dei bollettini</h2>
 <p>Stiamo raccogliendo i dati che vengono pubblicati nel tempo, in modo da poter produrre una visualizzazione di insieme nel tempo. In questa vista a calendario - creata con <a href="https://observablehq.com/plot/">Observable Plot</a> - gli ultimi 15 giorni di dati disponibili (compresi, se disponibili, i dati previsti per i giorni successivi).<br> I nomi delle città sono ordinati dall’alto verso il basso, a partire da quella più a nord, verso quella più a sud (è un’idea di <a href="https://twitter.com/DennisAngemi">Dennis Angemi</a>, grazie).</p>
 <iframe width="100%" height="706" frameborder="0" src="https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario">
 </iframe>
@@ -200,8 +200,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;iframe</span> <span class="er">width</span><span class="ot">=</span><span class="st">"100%"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"706"</span> <span class="er">frameborder</span><span class="ot">=</span><span class="st">"0"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ot">  src=</span><span class="st">"https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario"</span><span class="kw">&gt;&lt;/iframe&gt;</span></span></code><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="dati" class="level1">
-<h1>Dati</h1>
+<section id="dati" class="level2">
+<h2 class="anchored" data-anchor-id="dati">Dati</h2>
 <p>Questi i dati principali resi disponibili:</p>
 <ul>
 <li><a href="https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_latest.csv"><code>ondate-calore_latest.csv</code></a>, con gli ultimi dati estratti;</li>
@@ -531,7 +531,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">a cura di <a href="https://www.ondata.it/">onData</a></div>   
+    <div class="nav-footer-left">a cura di <a href="https://www.ondata.it/">onData</a> (fatto con <a href="https://quarto.org/">Quarto</a>)</div>   
     <div class="nav-footer-center"><a href="./note.html#licenza">Licenza</a></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
