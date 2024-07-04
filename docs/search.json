@@ -1,10 +1,24 @@
 [
   {
+    "objectID": "note.html",
+    "href": "note.html",
+    "title": "Note",
+    "section": "",
+    "text": "Il 12 luglio 2023 abbiamo scritto questa PEC ai responsabili della pubblicazione di questi bollettini:\nInoltre abbiamo fatto presente che:"
+  },
+  {
+    "objectID": "note.html#licenza",
+    "href": "note.html#licenza",
+    "title": "Note",
+    "section": "Licenza",
+    "text": "Licenza\nLa licenza scelta è la CC-BY-4.0 (Creative Commons Attribution 4.0 International). Quindi sei libero di usare come preferisci i dati estratti, avendo cura di citare la fonte."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Introduzione",
     "section": "",
-    "text": "Dal 2 ottobre 2023 abbiamo sospeso l’aggiornamento di questa pagina.\nIl Ministero della Salute pubblica da alcuni anni i bollettini sulle ondate di calore:\nQuattro livelli di rischio:\nSono 27 le città per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in questa circolare del Ministero: i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.\nQuesti dati non sono disponibili in formato leggibile meccanicamente (CSV, JSON, ecc.), ma soltanto come tabella HTML e come PDF.\nAllora giorno 8 luglio 2023 abbiamo creato uno script che li estrae ogni giorno e li pubblica, su questo repository GitHub. A partire dai dati estratti abbiamo creato una mappa e un calendario dei bollettini."
+    "text": "Il Ministero della Salute pubblica da alcuni anni i bollettini sulle ondate di calore:\nQuattro livelli di rischio:\nSono 27 le città per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in questa circolare del Ministero: i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.\nQuesti dati non sono disponibili in formato leggibile meccanicamente (CSV, JSON, ecc.), ma soltanto come tabella HTML e come PDF.\nAllora giorno 8 luglio 2023 abbiamo creato uno script che li estrae ogni giorno e li pubblica, su questo repository GitHub. A partire dai dati estratti abbiamo creato una mappa e un calendario dei bollettini."
   },
   {
     "objectID": "index.html#mappa-dei-bollettini",
@@ -26,19 +40,5 @@
     "title": "Introduzione",
     "section": "Dati",
     "text": "Dati\nQuesti i dati principali resi disponibili:\n\nondate-calore_latest.csv, con gli ultimi dati estratti;\nondate-calore_archivio.csv, con l’archivio dei dati estratti, a partire da giorno 8 luglio 2023.\n\nQuesta la descrizione dei campi:\n\n\nSchema dati\n\n\n\n\n\n\n\ncampo\ndescrizione\ntipo\n\n\n\n\ncitta\nil nome della città\ntesto\n\n\ndata\nla data riportata nel bollettino\ndata in formato anno, mese giorno, AAAA-MM-GG\n\n\nlivello\nil livello di rischio per quella città in quel giorno\ntesto\n\n\ndata_estrazione\nla data in cui i dati sono stati estratti\ndata in formato anno, mese giorno, AAAA-MM-GG\n\n\n\n\nOltre questi due file, è reso disponibile un file di “anagrafica” denominato citta-anagrafica.csv: contiene le coordinate di ogni città, e il codice Istat comunale nel campo admin3code (la fonte dati è geonames)."
-  },
-  {
-    "objectID": "note.html",
-    "href": "note.html",
-    "title": "Note",
-    "section": "",
-    "text": "Il 12 luglio 2023 abbiamo scritto questa PEC ai responsabili della pubblicazione di questi bollettini:\nInoltre abbiamo fatto presente che:"
-  },
-  {
-    "objectID": "note.html#licenza",
-    "href": "note.html#licenza",
-    "title": "Note",
-    "section": "Licenza",
-    "text": "Licenza\nLa licenza scelta è la CC-BY-4.0 (Creative Commons Attribution 4.0 International). Quindi sei libero di usare come preferisci i dati estratti, avendo cura di citare la fonte."
   }
 ]
