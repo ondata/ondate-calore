@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss">
+  <channel>
+    <title>Allerta</title>
+    <description>Descrizione</description>
+    <link>channel_link</link>
+    <item>
+      <ogr:admin3code>92009</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-07</link>
+      <title>CAGLIARI - 07/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Sun, 07 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+    <item>
+      <ogr:admin3code>92009</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-06</link>
+      <title>CAGLIARI - 06/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+    <item>
+      <ogr:admin3code>92009</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-05</link>
+      <title>CAGLIARI - 05/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+  </channel>
+</rss>
