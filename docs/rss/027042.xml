@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">
   <channel>
-    <title>Allerta</title>
-    <description>Descrizione</description>
-    <link>channel_link</link>
+    <title>Venezia: bollettini sulle ondate di calore</title>
+    <description>Per gli aggiornamenti su condizioni non buone</description>
+    <link>https://ondata.github.io/ondate-calore/rss/027042.xml</link>
     <item>
+      <ogr:name>Venezia</ogr:name>
       <ogr:admin3code>27042</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16105_venezia_20240705.pdf?data=2024-07-07</link>
       <title>VENEZIA - 07/07/2024: Livello 0</title>
@@ -13,6 +14,7 @@
       <category>Livello 0</category>
     </item>
     <item>
+      <ogr:name>Venezia</ogr:name>
       <ogr:admin3code>27042</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16105_venezia_20240705.pdf?data=2024-07-06</link>
       <title>VENEZIA - 06/07/2024: Livello 0</title>
@@ -21,6 +23,7 @@
       <category>Livello 0</category>
     </item>
     <item>
+      <ogr:name>Venezia</ogr:name>
       <ogr:admin3code>27042</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16105_venezia_20240705.pdf?data=2024-07-05</link>
       <title>VENEZIA - 05/07/2024: Livello 0</title>
