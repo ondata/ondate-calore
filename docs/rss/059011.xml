@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:georss="http://www.georss.org/georss">
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">
   <channel>
     <title>Allerta</title>
     <description>Descrizione</description>

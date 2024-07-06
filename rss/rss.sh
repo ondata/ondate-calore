@@ -32,5 +32,6 @@ mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read 
   echo "admin3code: $admin3code"
   mkdir -p "${folder}"/../docs/rss
   ogr2ogr -f GeoRSS "${folder}"/../docs/rss/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="Allerta" -dsco DESCRIPTION="Descrizione" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'"
+  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/../docs/rss/"$admin3code".xml
 done
 
