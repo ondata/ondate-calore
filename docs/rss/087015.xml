@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>Catania: bollettini sulle ondate di calore</title>
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/087015.xml</link>
     <item>
-      <ogr:name>Catania</ogr:name>
-      <ogr:admin3code>87015</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16460_catania_20240705.pdf?data=2024-07-07</link>
       <title>CATANIA - 07/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
@@ -14,8 +12,6 @@
       <category>Livello 0</category>
     </item>
     <item>
-      <ogr:name>Catania</ogr:name>
-      <ogr:admin3code>87015</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16460_catania_20240705.pdf?data=2024-07-06</link>
       <title>CATANIA - 06/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
@@ -23,8 +19,6 @@
       <category>Livello 0</category>
     </item>
     <item>
-      <ogr:name>Catania</ogr:name>
-      <ogr:admin3code>87015</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16460_catania_20240705.pdf?data=2024-07-05</link>
       <title>CATANIA - 05/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
