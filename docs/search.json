@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "Introduzione",
     "section": "",
-    "text": "Il Ministero della Salute pubblica da alcuni anni i bollettini sulle ondate di calore:\nQuattro livelli di rischio:\nSono 27 le città per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in questa circolare del Ministero: i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.\nQuesti dati non sono disponibili in formato leggibile meccanicamente (CSV, JSON, ecc.), ma soltanto come tabella HTML e come PDF.\nAllora giorno 8 luglio 2023 abbiamo creato uno script che li estrae ogni giorno e li pubblica, su questo repository GitHub. A partire dai dati estratti abbiamo creato una mappa e un calendario dei bollettini."
+    "text": "Il Ministero della Salute pubblica da alcuni anni i bollettini sulle ondate di calore:\nQuattro livelli di rischio:\nSono 27 le città per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in questa circolare del Ministero: i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.\nQuesti dati non sono disponibili in formato leggibile meccanicamente (CSV, JSON, ecc.), ma soltanto come tabella HTML e come PDF.\nAllora giorno 8 luglio 2023 abbiamo creato uno script che li estrae ogni giorno e li pubblica, su questo repository GitHub. A partire dai dati estratti abbiamo creato una mappa, un calendario, e i feed RSS, dei bollettini."
   },
   {
     "objectID": "index.html#mappa-dei-bollettini",
