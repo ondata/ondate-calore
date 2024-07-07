@@ -5,8 +5,6 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/001272.xml</link>
     <item>
-      <ogr:name>Torino</ogr:name>
-      <ogr:admin3code>1272</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16059_torino_20240705.pdf?data=2024-07-07</link>
       <title>TORINO - 07/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
@@ -14,8 +12,6 @@
       <category>Livello 0</category>
     </item>
     <item>
-      <ogr:name>Torino</ogr:name>
-      <ogr:admin3code>1272</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16059_torino_20240705.pdf?data=2024-07-06</link>
       <title>TORINO - 06/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
@@ -23,8 +19,6 @@
       <category>Livello 0</category>
     </item>
     <item>
-      <ogr:name>Torino</ogr:name>
-      <ogr:admin3code>1272</ogr:admin3code>
       <link>https://www.deplazio.net/images/stories/bollettini/bol16059_torino_20240705.pdf?data=2024-07-05</link>
       <title>TORINO - 05/07/2024: Livello 0</title>
       <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
