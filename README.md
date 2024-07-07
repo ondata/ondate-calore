@@ -68,8 +68,9 @@ Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominat
 
 Nel [sito](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI) dei bollettini si fa presente che:
 
-- Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna (<http://www.arpa.emr.it/sim/external/pciv/bollettino_calore_pciv.php>)
-- Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte (<http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file>)
+
+- Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna ([https://simc.arpae.it/servibollettino/bollettino_calore_bologna/](https://simc.arpae.it/servibollettino/bollettino_calore_bologna/))
+- Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte ([http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file](http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file))
 
 ## Mappa
 
@@ -78,7 +79,7 @@ Su datawrapper è stata pubblicata [questa mappa](https://www.datawrapper.de/_/e
 Se la vuoi incorporare nel tuo sito, puoi copiare il codice `HTML` di sotto.
 
 ```html
-<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="812" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
+<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/32/" scrolling="no" frameborder="0" style="border: none;" width="600" height="812" data-external="1"></iframe>
 ```
 
 [![](immagini/ondate-calore.gif)](https://www.datawrapper.de/_/elo50/)
