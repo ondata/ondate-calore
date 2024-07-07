@@ -41,6 +41,6 @@ mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read 
   echo "admin3code: $admin3code"
   mkdir -p "${folder}"/../docs/rss
   citta=$(mlrgo -S --c2n filter '$admin3code=="'"$admin3code"'"' then cut -f name "${folder}"/../data/citta-anagrafica.csv)
-  ogr2ogr -f GeoRSS "${folder}"/../docs/rss/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="$citta: bollettini sulle ondate di calore" -dsco DESCRIPTION="Per gli aggiornamenti su condizioni non buone" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'" -dsco LINK="https://ondata.github.io/ondate-calore/rss/$admin3code.xml"
-  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/../docs/rss/"$admin3code".xml
+  ogr2ogr -f GeoRSS "${folder}"/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="$citta: bollettini sulle ondate di calore" -dsco DESCRIPTION="Per gli aggiornamenti su condizioni non buone" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'" -dsco LINK="https://ondata.github.io/ondate-calore/rss/$admin3code.xml"
+  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/"$admin3code".xml
 done
