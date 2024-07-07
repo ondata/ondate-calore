@@ -28,7 +28,7 @@ jobs:
         chmod +x mlr
         chmod +x mlrgo
         sudo pip install yq
-        sudo pip install gdal-bin
+        sudo apt-get install gdal-bin
     - name: esegui lo script per scaricare i dati
       run: |-
         export PATH=$PATH:~/bin
