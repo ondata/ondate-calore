@@ -37,10 +37,10 @@ jobs:
         ./ondate-calore.sh
     - name: esegui lo script per creare feed rss
       run: |-
-          export PATH=$PATH:~/bin
-          cd ./
-          chmod +x ./rss.sh
-          ./rss.sh
+        export PATH=$PATH:~/bin
+        cd ./rss
+        chmod +x ./rss.sh
+        ./rss.sh
     - name: Committa e pusha se ci sono variazioni nei dati
       run: |-
         git config user.name "automatico"
