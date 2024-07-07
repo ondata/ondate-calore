@@ -84,7 +84,8 @@ Oltre questi due file, è reso disponibile un file di "anagrafica" denominato [`
 
 ## Feed RSS
 
-Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorare dal Ministero, ti puoi iscrivere al feed RSS relativo. Saranno aggiornati soltanto se il livello di rischio è maggiore uguale a 1.
+Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorare dal Ministero, ti puoi iscrivere al feed RSS relativo.<br>
+Saranno **aggiornati soltanto se il livello di rischio previsto è maggiore uguale a 1**.
 
 | Città | Regione | RSS |
 | --- | --- | --- |
