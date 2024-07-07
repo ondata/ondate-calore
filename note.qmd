@@ -8,7 +8,7 @@ In questa pagina alcune note sul progetto e sugli eventuali aggiornamenti nel te
 
 ### Luglio 2024
 
-- Abbiamo aggiungo i [**feed RSS**](index.qmd#feed-rss), uno per ogni città, per ricevere le notifiche su annunci di nuove ondate di calore;
+- Abbiamo aggiunto i [**feed RSS**](index.qmd#feed-rss), uno per ogni città, per ricevere le notifiche su annunci di nuove ondate di calore;
 - gli URL dei PDF dei bollettini sono stati aggiornati, ora sono in HTTPS (vedi nota su [Luglio 2023](#luglio-2023));
 
 ### Luglio 2023

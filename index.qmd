@@ -114,3 +114,5 @@ Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorar
 | Venezia | [https://ondata.github.io/ondate-calore/rss/027042.xml](https://ondata.github.io/ondate-calore/rss/027042.xml) |
 | Verona | [https://ondata.github.io/ondate-calore/rss/023091.xml](https://ondata.github.io/ondate-calore/rss/023091.xml) |
 | Viterbo | [https://ondata.github.io/ondate-calore/rss/056059.xml](https://ondata.github.io/ondate-calore/rss/056059.xml) |
+
+: Città e relativi feed RSS {.striped .hover .table-sm}
