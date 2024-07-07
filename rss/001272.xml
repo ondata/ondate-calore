@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>Torino: bollettini sulle ondate di calore</title>
     <description>Per gli aggiornamenti su condizioni non buone</description>
