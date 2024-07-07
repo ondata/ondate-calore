@@ -80,3 +80,37 @@ Questa la descrizione dei campi:
 : Schema dati {.responsive .striped}
 
 Oltre questi due file, è reso disponibile un file di "anagrafica" denominato [`citta-anagrafica.csv`](https://github.com/ondata/ondate-calore/blob/main/data/citta-anagrafica.csv): contiene le coordinate di ogni città, e il codice Istat comunale nel campo `admin3code` (la fonte dati è [geonames](https://www.geonames.org/export/)).
+
+## Feed RSS
+
+Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorare dal Ministero, ti puoi iscrivire al feed RSS relativo. Saranno aggiornati soltanto per i livelli di rischio maggiori o uguali a 1, così sarai sempre informato quando è degno di nota.
+
+| Città | RSS |
+| --- | --- |
+| Ancona | [https://ondata.github.io/ondate-calore/rss/042002.xml](https://ondata.github.io/ondate-calore/rss/042002.xml) |
+| Bari | [https://ondata.github.io/ondate-calore/rss/072006.xml](https://ondata.github.io/ondate-calore/rss/072006.xml) |
+| Bologna | [https://ondata.github.io/ondate-calore/rss/037006.xml](https://ondata.github.io/ondate-calore/rss/037006.xml) |
+| Bolzano/Bozen | [https://ondata.github.io/ondate-calore/rss/021008.xml](https://ondata.github.io/ondate-calore/rss/021008.xml) |
+| Brescia | [https://ondata.github.io/ondate-calore/rss/017029.xml](https://ondata.github.io/ondate-calore/rss/017029.xml) |
+| Cagliari | [https://ondata.github.io/ondate-calore/rss/092009.xml](https://ondata.github.io/ondate-calore/rss/092009.xml) |
+| Campobasso | [https://ondata.github.io/ondate-calore/rss/070006.xml](https://ondata.github.io/ondate-calore/rss/070006.xml) |
+| Catania | [https://ondata.github.io/ondate-calore/rss/087015.xml](https://ondata.github.io/ondate-calore/rss/087015.xml) |
+| Civitavecchia | [https://ondata.github.io/ondate-calore/rss/058032.xml](https://ondata.github.io/ondate-calore/rss/058032.xml) |
+| Firenze | [https://ondata.github.io/ondate-calore/rss/048017.xml](https://ondata.github.io/ondate-calore/rss/048017.xml) |
+| Frosinone | [https://ondata.github.io/ondate-calore/rss/060038.xml](https://ondata.github.io/ondate-calore/rss/060038.xml) |
+| Genova | [https://ondata.github.io/ondate-calore/rss/010025.xml](https://ondata.github.io/ondate-calore/rss/010025.xml) |
+| Latina | [https://ondata.github.io/ondate-calore/rss/059011.xml](https://ondata.github.io/ondate-calore/rss/059011.xml) |
+| Messina | [https://ondata.github.io/ondate-calore/rss/083048.xml](https://ondata.github.io/ondate-calore/rss/083048.xml) |
+| Milano | [https://ondata.github.io/ondate-calore/rss/015146.xml](https://ondata.github.io/ondate-calore/rss/015146.xml) |
+| Napoli | [https://ondata.github.io/ondate-calore/rss/063049.xml](https://ondata.github.io/ondate-calore/rss/063049.xml) |
+| Palermo | [https://ondata.github.io/ondate-calore/rss/082053.xml](https://ondata.github.io/ondate-calore/rss/082053.xml) |
+| Perugia | [https://ondata.github.io/ondate-calore/rss/054039.xml](https://ondata.github.io/ondate-calore/rss/054039.xml) |
+| Pescara | [https://ondata.github.io/ondate-calore/rss/068028.xml](https://ondata.github.io/ondate-calore/rss/068028.xml) |
+| Reggio di Calabria | [https://ondata.github.io/ondate-calore/rss/080063.xml](https://ondata.github.io/ondate-calore/rss/080063.xml) |
+| Rieti | [https://ondata.github.io/ondate-calore/rss/057059.xml](https://ondata.github.io/ondate-calore/rss/057059.xml) |
+| Roma | [https://ondata.github.io/ondate-calore/rss/058091.xml](https://ondata.github.io/ondate-calore/rss/058091.xml) |
+| Torino | [https://ondata.github.io/ondate-calore/rss/001272.xml](https://ondata.github.io/ondate-calore/rss/001272.xml) |
+| Trieste | [https://ondata.github.io/ondate-calore/rss/032006.xml](https://ondata.github.io/ondate-calore/rss/032006.xml) |
+| Venezia | [https://ondata.github.io/ondate-calore/rss/027042.xml](https://ondata.github.io/ondate-calore/rss/027042.xml) |
+| Verona | [https://ondata.github.io/ondate-calore/rss/023091.xml](https://ondata.github.io/ondate-calore/rss/023091.xml) |
+| Viterbo | [https://ondata.github.io/ondate-calore/rss/056059.xml](https://ondata.github.io/ondate-calore/rss/056059.xml) |

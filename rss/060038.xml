@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">
+  <channel>
+    <title>Frosinone: bollettini sulle ondate di calore</title>
+    <description>Per gli aggiornamenti su condizioni non buone</description>
+    <link>https://ondata.github.io/ondate-calore/rss/060038.xml</link>
+    <item>
+      <ogr:name>Frosinone</ogr:name>
+      <ogr:admin3code>60038</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16244_frosinone_20240705.pdf?data=2024-07-07</link>
+      <title>FROSINONE - 07/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Sun, 07 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+    <item>
+      <ogr:name>Frosinone</ogr:name>
+      <ogr:admin3code>60038</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16244_frosinone_20240705.pdf?data=2024-07-06</link>
+      <title>FROSINONE - 06/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+    <item>
+      <ogr:name>Frosinone</ogr:name>
+      <ogr:admin3code>60038</ogr:admin3code>
+      <link>https://www.deplazio.net/images/stories/bollettini/bol16244_frosinone_20240705.pdf?data=2024-07-05</link>
+      <title>FROSINONE - 05/07/2024: Livello 0</title>
+      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
+      <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 0</category>
+    </item>
+  </channel>
+</rss>

@@ -6,6 +6,7 @@ project:
   - "!LICENSE.md"
   resources:
   - "immagini/bollettini-ondate-calore-og.png"
+  - "rss/*.xml"
 
 website:
   site-url: "https://ondata.github.io/ondate-calore"
