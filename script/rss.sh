@@ -36,13 +36,15 @@ mlrgo -I -S --csv --from "${folder}"/tmp/rss.csv put '$data_title=strftime(strpt
 # crea una copia in jsonl
 # mlrgo --icsv --ojsonl cat "${folder}"/tmp/rss.csv > "${folder}"/tmp/rss.jsonl
 
+mkdir -p "${folder}"/../docs/rss
+mkdir -p "${folder}"/../rss
+
 # per ogni codice città con dei dati, crea un feed RSS
 mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read -r admin3code; do
   echo "admin3code: $admin3code"
-  mkdir -p "${folder}"/../docs/rss
   citta=$(mlrgo -S --c2n filter '$admin3code=="'"$admin3code"'"' then cut -f name "${folder}"/../data/citta-anagrafica.csv)
-  ogr2ogr -f GeoRSS "${folder}"/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="$citta: bollettini sulle ondate di calore" -dsco DESCRIPTION="Per gli aggiornamenti su condizioni non buone" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'" -dsco LINK="https://ondata.github.io/ondate-calore/rss/$admin3code.xml"
-#  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/"$admin3code".xml
-  sed -i '/<ogr:/d' "${folder}"/"$admin3code".xml
-  sed -i '/^$/d' "${folder}"/"$admin3code".xml
+  ogr2ogr -f GeoRSS "${folder}"/../rss/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="$citta: bollettini sulle ondate di calore" -dsco DESCRIPTION="Per gli aggiornamenti su condizioni non buone" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'" -dsco LINK="https://ondata.github.io/ondate-calore/rss/$admin3code.xml"
+#  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/../rss/"$admin3code".xml
+  sed -i '/<ogr:/d' "${folder}"/../rss/"$admin3code".xml
+  sed -i '/^$/d' "${folder}"/../rss/"$admin3code".xml
 done

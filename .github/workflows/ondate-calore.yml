@@ -38,7 +38,7 @@ jobs:
     - name: esegui lo script per creare feed rss
       run: |-
         export PATH=$PATH:~/bin
-        cd ./rss
+        cd ./script
         chmod +x ./rss.sh
         ./rss.sh
     - name: Committa e pusha se ci sono variazioni nei dati
