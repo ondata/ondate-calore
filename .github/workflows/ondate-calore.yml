@@ -28,12 +28,19 @@ jobs:
         chmod +x mlr
         chmod +x mlrgo
         sudo pip install yq
-    - name: esegui lo script
+        sudo pip install gdal-bin
+    - name: esegui lo script per scaricare i dati
       run: |-
         export PATH=$PATH:~/bin
         cd ./
         chmod +x ./ondate-calore.sh
         ./ondate-calore.sh
+    - name: esegui lo script per creare feed rss
+      run: |-
+          export PATH=$PATH:~/bin
+          cd ./
+          chmod +x ./rss.sh
+          ./rss.sh
     - name: Committa e pusha se ci sono variazioni nei dati
       run: |-
         git config user.name "automatico"
