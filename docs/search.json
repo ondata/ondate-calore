@@ -32,7 +32,7 @@
     "href": "index.html#mappa-dei-bollettini",
     "title": "Introduzione",
     "section": "Mappa dei bollettini",
-    "text": "Mappa dei bollettini\nAbbiamo pubblicato questa mappa su datawrapper, che si aggiorna automaticamente ogni giorno.\n\n\n\n\n\n\nSe la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:\n&lt;div style=\"min-height:812px\"&gt;&lt;script type=\"text/javascript\" defer src=\"https://datawrapper.dwcdn.net/elo50/embed.js?v=29\" charset=\"utf-8\"&gt;&lt;/script&gt;&lt;noscript&gt;&lt;img src=\"https://datawrapper.dwcdn.net/elo50/full.png\" alt=\"\" /&gt;&lt;/noscript&gt;&lt;/div&gt;"
+    "text": "Mappa dei bollettini\nAbbiamo pubblicato questa mappa su datawrapper, che si aggiorna automaticamente ogni giorno.\n\n\n\nSe la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:\n&lt;iframe title=\"Bollettini sulle ondate di calore\" aria-label=\"Mappa\" id=\"datawrapper-chart-elo50\" src=\"https://datawrapper.dwcdn.net/elo50/31/\" scrolling=\"no\" frameborder=\"0\" style=\"border: none;\" width=\"600\" height=\"812\" data-external=\"1\"&gt;&lt;/iframe&gt;"
   },
   {
     "objectID": "index.html#calendario-dei-bollettini",
