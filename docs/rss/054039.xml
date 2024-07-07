@@ -13,23 +13,5 @@
       <pubDate>Sun, 07 Jul 2024 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
-    <item>
-      <ogr:name>Perugia</ogr:name>
-      <ogr:admin3code>54039</ogr:admin3code>
-      <link>https://www.deplazio.net/images/stories/bollettini/bol16182_perugia_20240705.pdf?data=2024-07-06</link>
-      <title>PERUGIA - 06/07/2024: Livello 0</title>
-      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 0</category>
-    </item>
-    <item>
-      <ogr:name>Perugia</ogr:name>
-      <ogr:admin3code>54039</ogr:admin3code>
-      <link>https://www.deplazio.net/images/stories/bollettini/bol16182_perugia_20240705.pdf?data=2024-07-05</link>
-      <title>PERUGIA - 05/07/2024: Livello 0</title>
-      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
-      <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 0</category>
-    </item>
   </channel>
 </rss>
