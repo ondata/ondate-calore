@@ -48,3 +48,6 @@ mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read 
   sed -i '/<ogr:/d' "${folder}"/../rss/"$admin3code".xml
   sed -i '/^$/d' "${folder}"/../rss/"$admin3code".xml
 done
+
+#  copy all xml files in "${folder}"/../rss/ to "${folder}"/../docs/rss/
+cp "${folder}"/../rss/*.xml "${folder}"/../docs/rss/
