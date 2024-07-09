@@ -31,7 +31,7 @@ mlrgo --csv -S join --ul -j livello -f "${folder}"/tmp/rss.csv then unsparsify "
 mv "${folder}"/tmp/tmp.csv "${folder}"/tmp/rss.csv
 
 # crea campi e/o rinominali in modo che ci siano le colonne utili per il feed RSS
-mlrgo -I -S --csv --from "${folder}"/tmp/rss.csv put '$data_title=strftime(strptime($data, "%Y-%m-%d"),"%d/%m/%Y");$link=$URL."?data=".$data."&livello=".$livello_id;$title=$citta." - ".$data_title.": ".$livello_label;$description=$livello_des;$pubDate=$data." 00:00:00";$category=$livello_label' then sort -r data -f citta then cut -f link,title,description,pubDate,category,admin3code,name
+mlrgo -I -S --csv --from "${folder}"/tmp/rss.csv put '$data_title=strftime(strptime($data, "%Y-%m-%d"),"%d/%m/%Y");$link="https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI"."&data=".$data."&livello=".$livello_id;$title=$citta." - ".$data_title.": ".$livello_label;$description=$livello_des;$pubDate=$data." 00:00:00";$category=$livello_label' then sort -r data -f citta then cut -f link,title,description,pubDate,category,admin3code,name
 
 # crea una copia in jsonl
 # mlrgo --icsv --ojsonl cat "${folder}"/tmp/rss.csv > "${folder}"/tmp/rss.jsonl
