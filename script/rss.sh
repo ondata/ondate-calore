@@ -45,9 +45,11 @@ mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read 
   citta=$(mlrgo -S --c2n filter '$admin3code=="'"$admin3code"'"' then cut -f name "${folder}"/../data/citta-anagrafica.csv)
   ogr2ogr -f GeoRSS "${folder}"/../rss/"$admin3code".xml "${folder}"/tmp/rss.csv -dsco FORMAT="RSS" -dsco TITLE="$citta: bollettini sulle ondate di calore" -dsco DESCRIPTION="Per gli aggiornamenti su condizioni non buone" -oo AUTODETECT_TYPE=YES -dsco USE_EXTENSIONS=YES -where "admin3code='$admin3code'" -dsco LINK="https://ondata.github.io/ondate-calore/rss/$admin3code.xml"
 #  sed -i 's|<rss version="2.0" xmlns:georss="http://www.georss.org/georss">|<rss version="2.0" xmlns:georss="http://www.georss.org/georss" xmlns:ogr="http://www.opengis.net/gml">|' "${folder}"/../rss/"$admin3code".xml
+  # rimuovi extra fields
   sed -i '/<ogr:/d' "${folder}"/../rss/"$admin3code".xml
+  # rimuovi righe vuote
   sed -i '/^$/d' "${folder}"/../rss/"$admin3code".xml
 done
 
-#  copy all xml files in "${folder}"/../rss/ to "${folder}"/../docs/rss/
+# copia i feed RSS nella cartella docs
 cp "${folder}"/../rss/*.xml "${folder}"/../docs/rss/
