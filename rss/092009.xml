@@ -5,25 +5,18 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/092009.xml</link>
     <item>
-      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-07</link>
-      <title>CAGLIARI - 07/07/2024: Livello 0</title>
-      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
-      <pubDate>Sun, 07 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 0</category>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-12&amp;livello=1</link>
+      <title>CAGLIARI - 12/07/2024: Livello 1</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
     </item>
     <item>
-      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-06</link>
-      <title>CAGLIARI - 06/07/2024: Livello 0</title>
-      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
-      <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 0</category>
-    </item>
-    <item>
-      <link>https://www.deplazio.net/images/stories/bollettini/bol16560_cagliari_20240705.pdf?data=2024-07-05</link>
-      <title>CAGLIARI - 05/07/2024: Livello 0</title>
-      <description>Condizioni meteorologiche che non comportano rischi per la salute della popolazione</description>
-      <pubDate>Fri, 05 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 0</category>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-11&amp;livello=1</link>
+      <title>CAGLIARI - 11/07/2024: Livello 1</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Thu, 11 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
     </item>
   </channel>
 </rss>
