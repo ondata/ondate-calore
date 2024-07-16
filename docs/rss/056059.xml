@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/056059.xml</link>
     <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-18&amp;livello=3</link>
+      <title>VITERBO - 18/07/2024: Livello 3</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Thu, 18 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-17&amp;livello=3</link>
       <title>VITERBO - 17/07/2024: Livello 3</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>VITERBO - 16/07/2024: Livello 3</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
       <pubDate>Tue, 16 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-15&amp;livello=3</link>
-      <title>VITERBO - 15/07/2024: Livello 3</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
-      <pubDate>Mon, 15 Jul 2024 00:00:00 GMT</pubDate>
       <category>Livello 3</category>
     </item>
   </channel>
