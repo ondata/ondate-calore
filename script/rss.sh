@@ -27,6 +27,7 @@ mlrgo -S --csv join --ul -j citta -f "${folder}"/tmp/tmp.csv then unsparsify "${
 # aggiungi ai dati dei bollettini le infi sui livelli di rischio
 mlrgo --csv -S join --ul -j livello -f "${folder}"/tmp/rss.csv then unsparsify "${folder}"/../data/livelli.csv > "${folder}"/tmp/tmp.csv
 
+
 # rinomina il file
 mv "${folder}"/tmp/tmp.csv "${folder}"/tmp/rss.csv
 
@@ -49,6 +50,10 @@ mlrgo --c2n cut -f admin3code then uniq -a "${folder}"/tmp/rss.csv | while read 
   sed -i '/<ogr:/d' "${folder}"/../rss/"$admin3code".xml
   # rimuovi righe vuote
   sed -i '/^$/d' "${folder}"/../rss/"$admin3code".xml
+  sed -i 's/: Livello 3/: livello 3, rosso/' "${folder}"/../rss/"$admin3code".xml
+  sed -i 's/: Livello 2/: livello 2, arancione/' "${folder}"/../rss/"$admin3code".xml
+  sed -i 's/: Livello 1/: livello 1, giallo/' "${folder}"/../rss/"$admin3code".xml
+  sed -i 's/: Livello 0/: livello 0, verde/' "${folder}"/../rss/"$admin3code".xml
 done
 
 # copia i feed RSS nella cartella docs
