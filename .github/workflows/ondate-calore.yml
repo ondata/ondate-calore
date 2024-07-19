@@ -41,6 +41,9 @@ jobs:
         cd ./script
         chmod +x ./rss.sh
         ./rss.sh
+    - name: Pull ultime modifiche
+      run: |-
+        git pull origin main
     - name: Committa e pusha se ci sono variazioni nei dati
       run: |-
         git config user.name "automatico"
