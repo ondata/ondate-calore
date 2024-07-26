@@ -1,7 +1,6 @@
 name: scarica bollettino ondata calore
 
 on:
-#  push:
   repository_dispatch:
   schedule:
     - cron: "3 0-7/2 * * *"
@@ -13,39 +12,45 @@ jobs:
   scheduled:
     runs-on: ubuntu-latest
     steps:
-    - name: Utilizza l'action github checkout@v2, per automatizzare il check-out
+    - name: Checkout del repository
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - name: crea cartella utente bin, copia dentro l'eseguibile scrape e mlr
-      run: |-
+
+    - name: Configura l'ambiente Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Installa dipendenze
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y software-properties-common
+        sudo add-apt-repository ppa:ubuntugis/ppa
+        sudo apt-get update
+        sudo apt-get install -y gdal-bin
+        pip install yq
+
+    - name: Prepara gli strumenti
+      run: |
         mkdir -p ~/bin
-        cp bin/scrape ~/bin
-        cp bin/mlr ~/bin
-        cp bin/mlrgo ~/bin
-        cd ~/bin
-        chmod +x scrape
-        chmod +x mlr
-        chmod +x mlrgo
-        sudo pip install yq
-        sudo apt-get install gdal-bin
-    - name: esegui lo script per scaricare i dati
-      run: |-
-        export PATH=$PATH:~/bin
-        cd ./
+        cp bin/scrape bin/mlr bin/mlrgo ~/bin/
+        chmod +x ~/bin/scrape ~/bin/mlr ~/bin/mlrgo
+        echo "$HOME/bin" >> $GITHUB_PATH
+
+    - name: Scarica i dati
+      run: |
         chmod +x ./ondate-calore.sh
         ./ondate-calore.sh
-    - name: esegui lo script per creare feed rss
-      run: |-
-        export PATH=$PATH:~/bin
+
+    - name: Crea feed RSS
+      run: |
         cd ./script
         chmod +x ./rss.sh
         ./rss.sh
-    - name: Pull ultime modifiche
-      run: |-
-        git pull origin main
-    - name: Committa e pusha se ci sono variazioni nei dati
-      run: |-
+
+    - name: Committa e pusha le modifiche
+      run: |
         git config user.name "automatico"
         git config user.email "actions@users.noreply.github.com"
         git add -A
