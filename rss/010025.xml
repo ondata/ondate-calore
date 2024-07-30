@@ -5,24 +5,24 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/010025.xml</link>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-31&amp;livello=1</link>
-      <title>GENOVA - 31/07/2024: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-01&amp;livello=1</link>
+      <title>GENOVA - 01/08/2024: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-30&amp;livello=1</link>
-      <title>GENOVA - 30/07/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-29&amp;livello=2</link>
-      <title>GENOVA - 29/07/2024: livello 2, arancione</title>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-31&amp;livello=2</link>
+      <title>GENOVA - 31/07/2024: livello 2, arancione</title>
       <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
-      <pubDate>Mon, 29 Jul 2024 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate>
+      <category>Livello 2</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-07-30&amp;livello=2</link>
+      <title>GENOVA - 30/07/2024: livello 2, arancione</title>
+      <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
       <category>Livello 2</category>
     </item>
   </channel>
