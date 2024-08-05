@@ -5,10 +5,17 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/023091.xml</link>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-02&amp;livello=1</link>
-      <title>VERONA - 02/08/2024: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-07&amp;livello=1</link>
+      <title>VERONA - 07/08/2024: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Fri, 02 Aug 2024 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-06&amp;livello=1</link>
+      <title>VERONA - 06/08/2024: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Tue, 06 Aug 2024 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
