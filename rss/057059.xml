@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/057059.xml</link>
     <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-10&amp;livello=3</link>
+      <title>RIETI - 10/08/2024: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-09&amp;livello=3</link>
       <title>RIETI - 09/08/2024: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>RIETI - 08/08/2024: livello 2, arancione</title>
       <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
       <pubDate>Thu, 08 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 2</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-07&amp;livello=2</link>
-      <title>RIETI - 07/08/2024: livello 2, arancione</title>
-      <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
-      <pubDate>Wed, 07 Aug 2024 00:00:00 GMT</pubDate>
       <category>Livello 2</category>
     </item>
   </channel>
