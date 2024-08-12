@@ -5,25 +5,25 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/092009.xml</link>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-11&amp;livello=1</link>
-      <title>CAGLIARI - 11/08/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sun, 11 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-14&amp;livello=3</link>
+      <title>CAGLIARI - 14/08/2024: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
     </item>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-10&amp;livello=1</link>
-      <title>CAGLIARI - 10/08/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sat, 10 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-13&amp;livello=3</link>
+      <title>CAGLIARI - 13/08/2024: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
     </item>
     <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-09&amp;livello=1</link>
-      <title>CAGLIARI - 09/08/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Fri, 09 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-12&amp;livello=3</link>
+      <title>CAGLIARI - 12/08/2024: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Mon, 12 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
     </item>
   </channel>
 </rss>
