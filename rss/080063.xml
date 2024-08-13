@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/080063.xml</link>
     <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-15&amp;livello=1</link>
+      <title>REGGIO CALABRIA - 15/08/2024: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-14&amp;livello=1</link>
       <title>REGGIO CALABRIA - 14/08/2024: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
@@ -16,13 +23,6 @@
       <title>REGGIO CALABRIA - 13/08/2024: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
       <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-12&amp;livello=1</link>
-      <title>REGGIO CALABRIA - 12/08/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Mon, 12 Aug 2024 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
