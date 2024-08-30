@@ -5,17 +5,24 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/001272.xml</link>
     <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-09-01&amp;livello=1</link>
+      <title>TORINO - 01/09/2024: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-31&amp;livello=1</link>
+      <title>TORINO - 31/08/2024: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-30&amp;livello=1</link>
       <title>TORINO - 30/08/2024: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
       <pubDate>Fri, 30 Aug 2024 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&amp;id=4542&amp;area=emergenzaCaldo&amp;menu=vuoto&amp;btnBollettino=BOLLETTINI&amp;data=2024-08-29&amp;livello=1</link>
-      <title>TORINO - 29/08/2024: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Thu, 29 Aug 2024 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
