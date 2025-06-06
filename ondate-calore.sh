@@ -20,20 +20,20 @@ mkdir -p "$folder"/elaborazioni
 data=$(date +%Y-%m-%d)
 
 # url pagina
-url="https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI"
+url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/"
 
 # scarica la pagina, se non hai risposta 200 esci dallo script
-response=$(curl --write-out %{http_code} --silent --output /dev/null $url)
+response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null "$url")
 
-if [ $response != 200 ]; then
+if [ "$response" != "200" ]; then
     echo "La pagina non ha risposto con un codice HTTP 200. Lo script verrà interrotto."
     exit 1
 else
-    curl $url -o $folder/processing/output.html
+    curl -L "$url" -o "$folder/processing/output.html"
 fi
 
 # estrai data aggiornamento dichiarata sul sito
-<$folder/processing/output.html  scrape -e '//p[contains(text(), "Ultima versione aggiornata: ")]/b/text()' | sed -e 's/[[:space:]]//g' >$folder/processing/check
+<$folder/processing/output.html  scrape -e "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d.+\d' >$folder/processing/check
 
 # if file $folder/processing/check is equal to $folder/data/check, then exit
 if cmp -s $folder/processing/check $folder/data/check; then
