@@ -16,7 +16,7 @@ Sono pubblicati in una tabella HTML, in cui una colonna contiene i nomi delle ci
 
 [![](immagini/bollettini-ondate-calore.png)](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore)
 
-Quattro [livelli di rischio](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp?lingua=italiano&id=2506&area=emergenzaCaldo&menu=vuoto):
+Quattro [livelli di rischio](https://www.salute.gov.it/new/it/tema/ondate-di-calore/livelli-di-rischio-cosa-fare/):
 
 - **Livello 0**, condizioni meteorologiche che non comportano rischi per la salute della popolazione.
 - **Livello 1**, pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore.
