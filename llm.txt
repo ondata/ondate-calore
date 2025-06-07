@@ -1,0 +1,30 @@
+# Bollettini sulle Ondate di Calore – dataset estratto dal Ministero della Salute
+
+> Livelli di rischio per 27 città italiane (previsioni a 24 h, 48 h, 72 h). Licenza : CC-BY 4.0.
+
+## Licenza
+Creative Commons Attribution 4.0 International. Attribuire sempre “dati a cura dell’Associazione onData”
+Link : https://github.com/ondata/ondate-calore
+
+## Dataset CSV
+- https://raw.githubusercontent.com/ondata/ondate-calore/refs/heads/main/data/ondate-calore_latest.csv – ultimo snapshot (formato “long”, separatore `,`, UTF-8)
+- https://raw.githubusercontent.com/ondata/ondate-calore/refs/heads/main/data/ondate-calore_archivio.csv – archivio completo (dal 08-07-2023)
+- https://raw.githubusercontent.com/ondata/ondate-calore/refs/heads/main/data/citta-anagrafica.csv – coordinate e codice Istat delle 27 città (fonte GeoNames)
+
+
+## Descrizione campi
+| campo | descrizione | tipo/esempio |
+|---|---|---|
+| `citta` | nome della città | testo ‹ANCONA› |
+| `data` | giorno del bollettino | data ‹2025-07-09› |
+| `livello` | rischio (Livello0–Livello3) | testo ‹Livello2› |
+| `data_estrazione` | quando è stato estratto | data ‹2025-07-08› |
+
+## Note
+- 4 livelli di rischio: **0 → 3**, dove 3 = ondata di calore persistente.
+- Bologna e Torino usano bollettini regionali (vedi README).
+- Struttura passata da *wide* a *long* per semplificare l’analisi ETL.
+
+## Contatti
+- Issue tracker : https://github.com/ondata/ondate-calore/issues
+- e-mail : info@ondata.it

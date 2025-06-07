@@ -7,6 +7,7 @@ project:
   resources:
   - "immagini/bollettini-ondate-calore-og.png"
   - "rss/*.xml"
+  - "llm.txt"
 
 website:
   site-url: "https://ondata.github.io/ondate-calore"
