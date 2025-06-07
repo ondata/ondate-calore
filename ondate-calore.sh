@@ -132,5 +132,6 @@ mlr --csv join --ul -j citta -f "${folder}"/elaborazioni/ondate-calore_archivio_
 # pulisci file temporaneo delle coordinate
 rm "${folder}"/processing/latitude.csv
 
+# rinomina il file
 mv "${folder}"/processing/tmp.csv "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
 
