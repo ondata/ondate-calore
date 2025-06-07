@@ -1,6 +1,6 @@
 # Cosa è questo repo <!-- omit in toc -->
 
-Questo repo è stato creato per estrarre e archiviare i dati sui "[Bollettini sulle ondate di calore](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI)", pubblicati dal Ministero della Salute.
+Questo repo è stato creato per estrarre e archiviare i dati sui "[Bollettini sulle ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore)", pubblicati dal Ministero della Salute.
 
 > Per comunicare i possibili effetti sulla salute delle ondate di calore il ministero elabora dei bollettini giornalieri per 27 città con previsioni a 24, 48 e 72 ore.
 
@@ -14,7 +14,7 @@ Questo repo è stato creato per estrarre e archiviare i dati sui "[Bollettini su
 
 Sono pubblicati in una tabella HTML, in cui una colonna contiene i nomi delle città, e le altre il riferimento alla data e al livello di rischio.
 
-[![](immagini/bollettini-ondate-calore.png)](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI)
+[![](immagini/bollettini-ondate-calore.png)](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore)
 
 Quattro [livelli di rischio](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp?lingua=italiano&id=2506&area=emergenzaCaldo&menu=vuoto):
 
@@ -66,11 +66,11 @@ Oltre i due file estratti, è reso disponibile un file di "anagrafica" denominat
 
 ## Note
 
-Nel [sito](https://www.salute.gov.it/portale/caldo/bollettiniCaldo.jsp?lingua=italiano&id=4542&area=emergenzaCaldo&menu=vuoto&btnBollettino=BOLLETTINI) dei bollettini si fa presente che:
+Nel [sito](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore) dei bollettini si fa presente che:
 
 
-- Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna ([https://simc.arpae.it/servibollettino/bollettino_calore_bologna/](https://simc.arpae.it/servibollettino/bollettino_calore_bologna/))
-- Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte ([http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file](http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file))
+- Per Bologna consultare il bollettino emesso a cura dell'ARPA Emilia-Romagna (<http://www.arpa.emr.it/sim/external/pciv/bollettino_calore_pciv.php>)
+- Per Torino consultare il bollettino emesso a cura dell'ARPA Piemonte (<http://www.arpa.piemonte.it/bollettini/bollettino_calore_comune_torino.pdf/at_download/file>)
 
 ## Mappa
 
@@ -79,7 +79,7 @@ Su datawrapper è stata pubblicata [questa mappa](https://www.datawrapper.de/_/e
 Se la vuoi incorporare nel tuo sito, puoi copiare il codice `HTML` di sotto.
 
 ```html
-<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/32/" scrolling="no" frameborder="0" style="border: none;" width="600" height="812" data-external="1"></iframe>
+<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="border: none;" width="600" height="812" data-external="1"></iframe>
 ```
 
 [![](immagini/ondate-calore.gif)](https://www.datawrapper.de/_/elo50/)
