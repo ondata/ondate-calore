@@ -13,19 +13,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout del repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: Configura l'ambiente Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.11'
+        cache: 'pip'
 
     - name: Installa dipendenze
       run: |
         sudo apt-get update
-        sudo apt-get install -y software-properties-common
+        sudo apt-get install -y software-properties-common gdal-bin
+        pip install --upgrade pip
         pip install yq
 
     - name: Prepara gli strumenti
@@ -39,12 +41,14 @@ jobs:
       run: |
         chmod +x ./ondate-calore.sh
         ./ondate-calore.sh
+      continue-on-error: false
 
     - name: Crea feed RSS
       run: |
         cd ./script
         chmod +x ./rss.sh
         ./rss.sh
+      continue-on-error: false
 
     - name: Committa e pusha le modifiche
       run: |
