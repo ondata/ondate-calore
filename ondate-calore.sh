@@ -50,6 +50,9 @@ else
     # estrai URL PDF
     <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
 
+    # URL completo per i PDF
+    mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
+
     # trasforma struttura dati da wide a long
     mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data  -f citta then put '$data_estrazione="'"$data"'"'  >"${folder}"/data/ondate-calore_latest.csv
 
@@ -61,9 +64,6 @@ else
 
     # formattare in formato ISO la data
     mlr -I --csv --from "${folder}"/data/ondate-calore_latest.csv put '$data=strftime(strptime($data, "%d-%m-%Y"),"%Y-%m-%d")'
-
-    # URL completo per i PDF
-    mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_latest.csv
 
     # estrai i livelli come da schema
     mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/data/ondate-calore_latest.csv
