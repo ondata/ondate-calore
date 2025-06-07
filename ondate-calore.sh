@@ -96,7 +96,7 @@ done
 # Estrai un CSV, che per ogni riga stampa il delta rispetto a ieri e a domani
 # Calcola i delta tra i livelli di allerta di giorni consecutivi per ogni città
 # Estrae il numero dal livello, calcola le differenze tra giorni consecutivi e crea colonne per variazioni
-mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta then rename livello_n_delta,delta_giorno_prima then step -a shift_lead -f delta_giorno_prima -g citta then rename -r '.+_lead',delta_giorno_dopo then sort -f citta,data "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
+mlr --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta then rename livello_n_delta,delta_giorno_prima then step -a shift_lead -f delta_giorno_prima -g citta then rename -r '.+_lead',delta_giorno_dopo then sort -f citta,data "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
 
 # aggiungi ai dati di oggi i delta rispetto a ieri e a domani
 # estrai solo le colonne dei delta dall'archivio pulito per il join successivo
