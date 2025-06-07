@@ -22,11 +22,21 @@ data=$(date +%Y-%m-%d)
 # url pagina
 url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/"
 
-# scarica la pagina, se non hai risposta 200 esci dallo script
-response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null "$url")
+# scarica la pagina, riprova 5 volte se non ottieni 200
+attempt=1
+max_attempts=5
+while [ $attempt -le $max_attempts ]; do
+    response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null "$url")
+    if [ "$response" = "200" ]; then
+        break
+    fi
+    echo "Tentativo $attempt di $max_attempts fallito con codice $response. Attendo 10 secondi..."
+    sleep 10
+    attempt=$((attempt + 1))
+done
 
 if [ "$response" != "200" ]; then
-    echo "La pagina non ha risposto con un codice HTTP 200. Lo script verrà interrotto."
+    echo "La pagina non ha risposto con un codice HTTP 200 dopo $max_attempts tentativi. Lo script verrà interrotto."
     exit 1
 else
     curl -L "$url" -o "${folder}/processing/output.html"
