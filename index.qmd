@@ -25,7 +25,7 @@ Quattro [livelli di rischio](https://www.salute.gov.it/new/it/tema/ondate-di-cal
 Sono **27** le **città** per le quali vengono pubblicati i bollettini. Il criterio di scelta dovrebbe essere quello indicato in [questa circolare del Ministero](https://www.trovanorme.salute.gov.it/norme/renderNormsanPdf?anno=2023&codLeg=93738&parte=1%20&serie=null): i capoluoghi di Regione e i Comuni con oltre 200.000 abitanti.
 
 ::: {.column-margin}
-Non abbiamo verificato se questo filtro sia coerentemente applicato. Certamente non c'è alcuna città della Basilicata.
+Non abbiamo verificato se questo filtro sia coerentemente applicato. Certamente non c'è alcuna città della Basilicata e della Valle d'Aosta.
 :::
 
 Questi dati **non sono disponibili** in formato leggibile meccanicamente (`CSV`, `JSON`, ecc.), **ma soltanto come tabella HTML** e come **PDF**.
