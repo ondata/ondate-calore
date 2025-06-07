@@ -6,6 +6,10 @@ In questa pagina alcune note sul progetto e sugli eventuali aggiornamenti nel te
 
 ## Aggiornamenti
 
+### Giugno 2025
+
+- Abbiamo ripreso aggiornamento, archiviazione e pubblicazione dei dati.
+
 ### Luglio 2024
 
 - Abbiamo aggiunto i [**feed RSS**](index.qmd#feed-rss), uno per ogni città, per ricevere le notifiche su annunci di nuove ondate di calore;
