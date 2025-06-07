@@ -22,7 +22,6 @@ Link : https://github.com/ondata/ondate-calore
 
 ## Note
 - 4 livelli di rischio: **0 → 3**, dove 3 = ondata di calore persistente.
-- Bologna e Torino usano bollettini regionali (vedi README).
 - Struttura passata da *wide* a *long* per semplificare l’analisi ETL.
 
 ## Contatti
