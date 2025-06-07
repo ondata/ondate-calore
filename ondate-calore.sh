@@ -82,7 +82,9 @@ fi
 # estrai un CSV, con i dati di oggi, se presenti
 mlr --c2n cut -f data then uniq -a "${folder}"/data/ondate-calore_latest.csv | while read -r line; do
     if [[ $line == *"$data"* ]]; then
+        # crea il file con i dati di oggi, unendo con l'anagrafica delle città
         mlr --csv join --ul -j citta -f "${folder}"/data/ondate-calore_latest.csv then unsparsify then filter '$data=="'"$data"'"' "${folder}"/data/citta-anagrafica.csv >"${folder}"/data/ondate-calore_oggi.csv
+        # aggiungi informazioni sui livelli di allerta
         mlr --csv join --ul -j livello -f "${folder}"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta "${folder}"/risorse/livelli.csv >"${folder}"/processing/tmp.csv
         mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_oggi.csv
     else
@@ -92,12 +94,15 @@ done
 
 # Se risultano associati più valori in un giorno, per la stessa città, prendi il più recente
 # Estrai un CSV, che per ogni riga stampa il delta rispetto a ieri e a domani
+# Calcola i delta tra i livelli di allerta di giorni consecutivi per ogni città
+# Estrae il numero dal livello, calcola le differenze tra giorni consecutivi e crea colonne per variazioni
 mlrgo --csv sort -f citta -r data then top -n 1 -a -g citta,data -f data_estrazione then sort -f citta,data then put '$livello_n=int(regextract($livello,"[0-9]+"))' then step -a delta -f livello_n -g citta then rename livello_n_delta,delta_giorno_prima then step -a shift_lead -f delta_giorno_prima -g citta then rename -r '.+_lead',delta_giorno_dopo then sort -f citta,data "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
 
 # aggiungi ai dati di oggi i delta rispetto a ieri e a domani
-
+# estrai solo le colonne dei delta dall'archivio pulito per il join successivo
 mlr --csv cut -f citta,data,delta_giorno_prima,delta_giorno_dopo "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv >"${folder}"/processing/tmp.csv
 
+# unisci i dati di oggi con i delta e crea tooltip informativi basati sui cambiamenti di livello
 mlr --csv join --ul -j citta,data -f "${folder}"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data then put '
 if($delta_giorno_dopo>0) {
     $tooltip_domani="👀 <b>Domani</b> si starà peggio ⬆️"
@@ -108,10 +113,13 @@ if($delta_giorno_dopo>0) {
 };if(is_null($delta_giorno_dopo)){$tooltip_domani=""}else{$tooltip_domani=$tooltip_domani}
 ' "${folder}"/processing/tmp.csv >"${folder}"/elaborazioni/ondate-calore_oggi.csv
 
+# estrai le coordinate geografiche delle città per il join successivo
 mlr --csv  cut -f citta,latitude "${folder}"/data/citta-anagrafica.csv > "${folder}"/processing/latitude.csv
 
+# aggiungi le coordinate geografiche all'archivio pulito
 mlr --csv join --ul -j citta -f "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv then unsparsify then sort -f citta,data "${folder}"/processing/latitude.csv >"${folder}"/processing/tmp.csv
 
+# pulisci file temporaneo delle coordinate
 rm "${folder}"/processing/latitude.csv
 
 mv "${folder}"/processing/tmp.csv "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
