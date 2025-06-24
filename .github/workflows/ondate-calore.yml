@@ -3,9 +3,9 @@ name: scarica bollettino ondata calore
 on:
   repository_dispatch:
   schedule:
-    - cron: "3 0-7/2 * * *"
-    - cron: "3 8-11 * * *"
-    - cron: "3 11-23/2 * * *"
+    - cron: "3 8-15/1 * * *"
+    - cron: "3 17 * * *"
+    - cron: "3 19 * * *"
   workflow_dispatch:
 
 jobs:
