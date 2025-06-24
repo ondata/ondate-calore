@@ -5,10 +5,24 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/063049.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-26&amp;livello=2</link>
+      <title>NAPOLI - 26/06/2025: livello 2, arancione</title>
+      <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 GMT</pubDate>
+      <category>Livello 2</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-25&amp;livello=1</link>
       <title>NAPOLI - 25/06/2025: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
       <pubDate>Wed, 25 Jun 2025 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-24&amp;livello=1</link>
+      <title>NAPOLI - 24/06/2025: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
