@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/048017.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-27&amp;livello=3</link>
+      <title>FIRENZE - 27/06/2025: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-26&amp;livello=3</link>
       <title>FIRENZE - 26/06/2025: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>FIRENZE - 25/06/2025: livello 2, arancione</title>
       <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
       <pubDate>Wed, 25 Jun 2025 00:00:00 GMT</pubDate>
-      <category>Livello 2</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-06-24&amp;livello=2</link>
-      <title>FIRENZE - 24/06/2025: livello 2, arancione</title>
-      <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
-      <pubDate>Tue, 24 Jun 2025 00:00:00 GMT</pubDate>
       <category>Livello 2</category>
     </item>
   </channel>
