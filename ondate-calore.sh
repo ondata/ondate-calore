@@ -55,28 +55,25 @@ else
     <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, | sed -E 's#([0-9]{2})/([0-9]{2})/([0-9]{4})#\3-\2-\1#g' >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}'  | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].span."#text",prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}'  | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
 
-    # estrai URL PDF
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
+    # Le seguenti righe sono commentate perché gli URL PDF non sono più presenti in origine
+    # <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
 
-    # URL completo per i PDF
-    mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
+    # mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
 
     # trasforma struttura dati da wide a long
     mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data  -f citta then put '$data_estrazione="'"$data"'"'  >"${folder}"/data/ondate-calore_latest.csv
 
-    # aggiungi URL PDF
-    mlr --csv join --ul -j citta -f "${folder}"/data/ondate-calore_latest.csv then unsparsify "${folder}"/data/ondate-calore_PDF.csv >"${folder}"/processing/tmp.csv
-
-    # rinomina il file
-    mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_latest.csv
+    # # aggiungi URL PDF
+    # mlr --csv join --ul -j citta -f "${folder}"/data/ondate-calore_latest.csv then unsparsify "${folder}"/data/ondate-calore_PDF.csv >"${folder}"/processing/tmp.csv
+    # mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_latest.csv
 
     # formattare in formato ISO la data
     mlr -I --csv --from "${folder}"/data/ondate-calore_latest.csv put '$data=strftime(strptime($data, "%d-%m-%Y"),"%Y-%m-%d")'
 
     # estrai i livelli come da schema
-    mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/data/ondate-calore_latest.csv
+    mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' then put '$URL=""' "${folder}"/data/ondate-calore_latest.csv
 
     # se il file di archivio non esiste, crea un file vuoto
     if [ ! -f "${folder}"/data/ondate-calore_archivio.csv ]; then
