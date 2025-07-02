@@ -43,19 +43,18 @@ else
 fi
 
 # estrai data aggiornamento dichiarata sul sito
-<"${folder}"/processing/output.html  scrape -e "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d.+\d' >"${folder}"/processing/check
-
+<"${folder}"/processing/output.html scrape -e "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d.+\d' >"${folder}"/processing/check
 
 # if file ${folder}/processing/check is equal to ${folder}/data/check, then exit
 if cmp -s "${folder}"/processing/check "${folder}"/data/check; then
     echo "La data di aggiornamento non è cambiata. Lo script verrà interrotto."
 else
     mv "${folder}"/processing/check "${folder}"/data/check
-    # estrai header, e converti data in formato ISO
-    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, | sed -E 's#([0-9]{2})/([0-9]{2})/([0-9]{4})#\3-\2-\1#g' >"${folder}"/processing/ondate-calore.csv
+    # estrai header
+    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].span."#text",prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}'  | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].span."#text",prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}' | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
 
     # Le seguenti righe sono commentate perché gli URL PDF non sono più presenti in origine
     # <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
@@ -63,7 +62,7 @@ else
     # mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
 
     # trasforma struttura dati da wide a long
-    mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data  -f citta then put '$data_estrazione="'"$data"'"'  >"${folder}"/data/ondate-calore_latest.csv
+    mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data -f citta then put '$data_estrazione="'"$data"'"' >"${folder}"/data/ondate-calore_latest.csv
 
     # # aggiungi URL PDF
     # mlr --csv join --ul -j citta -f "${folder}"/data/ondate-calore_latest.csv then unsparsify "${folder}"/data/ondate-calore_PDF.csv >"${folder}"/processing/tmp.csv
@@ -120,7 +119,7 @@ if($delta_giorno_dopo>0) {
 ' "${folder}"/processing/tmp.csv >"${folder}"/elaborazioni/ondate-calore_oggi.csv
 
 # estrai le coordinate geografiche delle città per il join successivo
-mlr --csv  cut -f citta,latitude "${folder}"/data/citta-anagrafica.csv > "${folder}"/processing/latitude.csv
+mlr --csv cut -f citta,latitude "${folder}"/data/citta-anagrafica.csv >"${folder}"/processing/latitude.csv
 
 # aggiungi le coordinate geografiche all'archivio pulito
 mlr --csv join --ul -j citta -f "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv then unsparsify then sort -f citta,data "${folder}"/processing/latitude.csv >"${folder}"/processing/tmp.csv
@@ -130,4 +129,3 @@ rm "${folder}"/processing/latitude.csv
 
 # rinomina il file
 mv "${folder}"/processing/tmp.csv "${folder}"/elaborazioni/ondate-calore_archivio_clean.csv
-
