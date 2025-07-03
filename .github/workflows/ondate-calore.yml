@@ -6,6 +6,7 @@ on:
     - cron: "3 8-15/1 * * *"
     - cron: "3 17 * * *"
     - cron: "3 19 * * *"
+    - cron: "3 2 * * *" # 3:03 italiane (ora solare, 4:03 in ora legale)
   workflow_dispatch:
 
 jobs:
