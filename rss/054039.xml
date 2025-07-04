@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/054039.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-07-06&amp;livello=3</link>
+      <title>PERUGIA - 06/07/2025: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-07-05&amp;livello=3</link>
       <title>PERUGIA - 05/07/2025: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>PERUGIA - 04/07/2025: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
       <pubDate>Fri, 04 Jul 2025 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-07-03&amp;livello=3</link>
-      <title>PERUGIA - 03/07/2025: livello 3, rosso</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
-      <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
       <category>Livello 3</category>
     </item>
   </channel>
