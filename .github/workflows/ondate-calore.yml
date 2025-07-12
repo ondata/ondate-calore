@@ -59,3 +59,9 @@ jobs:
         timestamp=$(date --iso-8601=seconds)
         git commit -m "aggiornamento bollettino: ${timestamp}" || exit 0
         git push
+
+    - name: Attendi 10 secondi e aggiorna Datawrapper
+      run: |
+        sleep 10
+        curl -X POST "https://api.datawrapper.de/v3/charts/elo50/data/refresh" \
+          -H "Authorization: Bearer ${{ secrets.ANDY_DATAWRAPPER_TOKEN_CHART_UPDATE }}"
