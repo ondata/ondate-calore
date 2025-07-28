@@ -21,6 +21,7 @@ tmp*
 
 /tmp/*
 /processing/*
+!processing/2025-07-28_output.html
 
 /.quarto/
 .aider*
