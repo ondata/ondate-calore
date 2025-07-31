@@ -54,10 +54,38 @@ else
     <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}' | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
+    xq -c '.html.body.tr[] |
+    {
+        name: (
+        if (.td[0].a."#text" != null) then .td[0].a."#text"
+        elif (.td[0].span."#text" != null) then .td[0].span."#text"
+        else null
+        end
+        ),
+        prima: .td[1].span."@class",
+        seconda: .td[2].span."@class",
+        terza: .td[3].span."@class"
+    }' | \
+    mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
 
     # estrai URL PDF
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}' | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
+    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
+    xq -c '.html.body.tr[] |
+    {
+        name: (
+        if (.td[0].a."#text" != null) then .td[0].a."#text"
+        elif (.td[0].span."#text" != null) then .td[0].span."#text"
+        else null
+        end
+        ),
+        URL: (
+        if (.td[0].a."@href" != null) then .td[0].a."@href"
+        else ""
+        end
+        )
+    }' | \
+    mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
 
     # URL completo per i PDF
     mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
