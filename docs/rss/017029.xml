@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/017029.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-08-16&amp;livello=3</link>
+      <title>BRESCIA - 16/08/2025: livello 3, rosso</title>
+      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 GMT</pubDate>
+      <category>Livello 3</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-08-15&amp;livello=3</link>
       <title>BRESCIA - 15/08/2025: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>BRESCIA - 14/08/2025: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
       <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2025-08-13&amp;livello=3</link>
-      <title>BRESCIA - 13/08/2025: livello 3, rosso</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
-      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
       <category>Livello 3</category>
     </item>
   </channel>
