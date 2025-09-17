@@ -51,10 +51,10 @@ if cmp -s "${folder}"/processing/check "${folder}"/data/check; then
 else
     mv "${folder}"/processing/check "${folder}"/data/check
     # estrai header
-    <"${folder}"/processing/output.html scrape -be '//table/thead' | "${folder}"/bin/xq_entities -r '.html.body.thead.tr.td[]' | paste -sd, >"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | "${folder}"/bin/xq_entities -c '.html.body.tr[]|{name: (if (.td[0].span | type == "object" and ."#text" != null) then .td[0].span."#text" elif (.td[0].span | type == "string") then .td[0].span else null end), prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}' | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name: (if (.td[0].span | type == "object") then .td[0].span."#text" elif (.td[0].span | type == "string") then .td[0].span else null end), prima:.td[1].span."@class",seconda:.td[2].span."@class",terza:.td[3].span."@class"}' | mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
 
     # Le seguenti righe sono commentate perché gli URL PDF non sono più presenti in origine
     # <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | xq -c '.html.body.tr[]|{name:.td[0].a."#text",URL:.td[0].a."@href"}'  | mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
