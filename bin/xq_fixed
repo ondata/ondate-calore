@@ -1,0 +1,20 @@
+#!/bin/bash
+# Wrapper for xq that handles HTML entities by preprocessing them
+# This is a minimal fix to avoid rewriting the entire script logic
+
+# Read input
+input=$(cat)
+
+# Decode HTML entities using Python
+decoded_input=$(echo "$input" | python3 -c "
+import html
+import sys
+print(html.unescape(sys.stdin.read()))" 2>/dev/null)
+
+# If Python decoding fails, try with the original input
+if [ $? -ne 0 ]; then
+    decoded_input="$input"
+fi
+
+# Pass to original xq with all arguments
+echo "$decoded_input" | xq "$@"

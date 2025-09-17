@@ -51,15 +51,16 @@ if cmp -s "${folder}"/processing/check "${folder}"/data/check; then
 else
     mv "${folder}"/processing/check "${folder}"/data/check
     # estrai header
-    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/thead' | "${folder}"/bin/xq_entities -r '.html.body.thead.tr.td[]' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
     <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
-    xq -c '.html.body.tr[] |
+    "${folder}"/bin/xq_entities -c '.html.body.tr[] |
     {
         name: (
         if (.td[0].a."#text" != null) then .td[0].a."#text"
-        elif (.td[0].span."#text" != null) then .td[0].span."#text"
+        elif (.td[0].span | type == "object" and ."#text" != null) then .td[0].span."#text"
+        elif (.td[0].span | type == "string") then .td[0].span
         else null
         end
         ),
@@ -71,11 +72,12 @@ else
 
     # estrai URL PDF
     <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
-    xq -c '.html.body.tr[] |
+    "${folder}"/bin/xq_entities -c '.html.body.tr[] |
     {
         name: (
         if (.td[0].a."#text" != null) then .td[0].a."#text"
-        elif (.td[0].span."#text" != null) then .td[0].span."#text"
+        elif (.td[0].span | type == "object" and ."#text" != null) then .td[0].span."#text"
+        elif (.td[0].span | type == "string") then .td[0].span
         else null
         end
         ),

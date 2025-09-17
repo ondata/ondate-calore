@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""
+Custom XML to JSON converter with entity support enabled.
+This replaces 'xq' for cases where HTML entities need to be processed.
+It produces the same JSON structure as the original xq.
+"""
+import sys
+import json
+import xmltodict
+import subprocess
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: xq_entities <jq_filter>", file=sys.stderr)
+        sys.exit(1)
+    
+    # Read XML from stdin
+    xml_content = sys.stdin.read()
+    
+    try:
+        # Parse XML with entities enabled and other options matching xq behavior
+        parsed = xmltodict.parse(
+            xml_content, 
+            disable_entities=False,
+            process_namespaces=False,
+            strip_whitespace=True
+        )
+        
+        # Convert to JSON
+        json_output = json.dumps(parsed)
+        
+        # Pass to jq with all arguments
+        process = subprocess.Popen(['jq'] + sys.argv[1:], 
+                                   stdin=subprocess.PIPE, 
+                                   stdout=subprocess.PIPE, 
+                                   stderr=subprocess.PIPE,
+                                   text=True)
+        
+        stdout, stderr = process.communicate(input=json_output)
+        
+        if process.returncode != 0:
+            print(stderr, file=sys.stderr)
+            sys.exit(process.returncode)
+        
+        print(stdout, end='')
+        
+    except Exception as e:
+        print(f"Error parsing XML: {e}", file=sys.stderr)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
