@@ -38,19 +38,19 @@ A partire dai [dati estratti](#dati) abbiamo creato una [mappa](#mappa-dei-bolle
 
 Abbiamo pubblicato [questa mappa](https://www.datawrapper.de/_/elo50/) su datawrapper, che si aggiorna automaticamente ogni giorno.
 
-<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="812" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa simbolica" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="830" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();
 </script>
 
 Se la vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
 
 ```html
-<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="border: none;" width="600" height="812" data-external="1"></iframe>
+<iframe title="Bollettini sulle ondate di calore" aria-label="Mappa simbolica" id="datawrapper-chart-elo50" src="https://datawrapper.dwcdn.net/elo50/" scrolling="no" frameborder="0" style="border: none;" width="600" height="830" data-external="1"></iframe>
 ```
 
 ## Calendario dei bollettini
 
-Stiamo raccogliendo i dati che vengono pubblicati nel tempo, in modo da poter produrre una visualizzazione di insieme nel tempo. In questa vista a calendario - creata con [Observable Plot](https://observablehq.com/plot/) - gli ultimi 15 giorni di dati disponibili (compresi, se disponibili, i dati previsti per i giorni successivi).<br>
-I nomi delle città sono ordinati dall'alto verso il basso, a partire da quella più a nord, verso quella più a sud (è un'idea di [Dennis Angemi](https://twitter.com/DennisAngemi), grazie).
+Stiamo raccogliendo i dati che vengono pubblicati nel tempo, in modo da poter produrre una visualizzazione di insieme. In questa vista a calendario - creata con [Observable Plot](https://observablehq.com/plot/) - gli ultimi 15 giorni di dati disponibili (compresi, se disponibili, i dati previsti per i giorni successivi).<br>
+I nomi delle città sono ordinati dall'alto verso il basso, a partire da quella più a nord, verso quella più a sud (è un'idea di [Dennis Angemi](https://x.com/DennisAngemi), grazie).
 
 <iframe width="100%" height="706" frameborder="0"
   src="https://observablehq.com/embed/0e72b25a07e46af8?cells=calendario"></iframe>
@@ -67,7 +67,7 @@ Se lo vuoi inserire nel tuo sito, puoi fare il copia e incolla di questo codice:
 Questi i dati principali resi disponibili:
 
 - [`ondate-calore_latest.csv`](https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_latest.csv), con gli ultimi dati estratti;
-- [`ondate-calore_archivio.csv`](https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_archivio.csv), con l'archivio dei dati estratti, a partire da giorno 8 luglio 2023.
+- [`ondate-calore_archivio.csv`](https://raw.githubusercontent.com/ondata/ondate-calore/main/data/ondate-calore_archivio.csv), con l'archivio dei dati estratti, a partire dall'8 luglio 2023.
 
 Questa la descrizione dei campi:
 
@@ -84,7 +84,7 @@ Oltre questi due file, è reso disponibile un file di "anagrafica" denominato [`
 
 ## Feed RSS
 
-Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorare dal Ministero, ti puoi iscrivere al feed RSS relativo.<br>
+Se vuoi rimanere aggiornato sulle ondate di calore di una delle città monitorate dal Ministero, ti puoi iscrivere al feed RSS relativo.<br>
 Saranno **aggiornati soltanto se il livello di rischio previsto è maggiore uguale a 1**.
 
 | Città | Regione | RSS |

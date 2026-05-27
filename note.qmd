@@ -6,6 +6,10 @@ In questa pagina alcune note sul progetto e sugli eventuali aggiornamenti nel te
 
 ## Aggiornamenti
 
+### Maggio 2026
+
+- Riattivazione del servizio dopo lo stop di fine estate 2025.
+
 ### Giugno 2025
 
 - Abbiamo ripreso aggiornamento, archiviazione e pubblicazione dei dati.
