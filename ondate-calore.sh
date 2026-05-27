@@ -26,7 +26,7 @@ url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ond
 attempt=1
 max_attempts=5
 while [ $attempt -le $max_attempts ]; do
-    response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null "$url")
+    response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "$url")
     if [ "$response" = "200" ]; then
         break
     fi
@@ -39,7 +39,7 @@ if [ "$response" != "200" ]; then
     echo "La pagina non ha risposto con un codice HTTP 200 dopo $max_attempts tentativi. Lo script verrà interrotto."
     exit 1
 else
-    curl -L "$url" -o "${folder}/processing/output.html"
+    curl -L -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "$url" -o "${folder}/processing/output.html"
 fi
 
 # estrai data aggiornamento dichiarata sul sito
@@ -51,7 +51,7 @@ if cmp -s "${folder}"/processing/check "${folder}"/data/check; then
 else
     mv "${folder}"/processing/check "${folder}"/data/check
     # estrai header
-    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.td[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
+    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.th[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
     # estrai dati
     <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
