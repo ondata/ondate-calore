@@ -44,12 +44,12 @@ jobs:
         ./ondate-calore.sh
       continue-on-error: false
 
-    # - name: Crea feed RSS
-    #   run: |
-    #     cd ./script
-    #     chmod +x ./rss.sh
-    #     ./rss.sh
-    #   continue-on-error: false
+    - name: Crea feed RSS
+      run: |
+        cd ./script
+        chmod +x ./rss.sh
+        ./rss.sh
+      continue-on-error: false
 
     - name: Committa e pusha le modifiche
       run: |

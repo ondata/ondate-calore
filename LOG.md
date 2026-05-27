@@ -6,6 +6,8 @@
 - Fix `ondate-calore.sh`: aggiunto `User-Agent` a tutti i `curl` (il sito del ministero restituiva 403 senza).
 - Fix `ondate-calore.sh`: aggiornato XPath header tabella da `.td[]` a `.th[]` (il sito ha cambiato i tag).
 - Step RSS disabilitato temporaneamente nel workflow GitHub Actions.
+- Aggiunta validazione post-estrazione: lo script si interrompe se le città estratte sono meno di 27.
+- Step RSS riattivato nel workflow GitHub Actions.
 
 ## 2025-07-12
 

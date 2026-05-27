@@ -105,6 +105,13 @@ else
     # estrai i livelli come da schema
     mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/data/ondate-calore_latest.csv
 
+    # verifica che il file contenga dati per almeno 27 città distinte
+    n_citta=$(mlr --c2n cut -f citta then uniq -a "${folder}"/data/ondate-calore_latest.csv | wc -l)
+    if [ "$n_citta" -lt 27 ]; then
+        echo "ERRORE: trovate solo $n_citta città (attese 27). Estrazione probabilmente incompleta. Lo script verrà interrotto."
+        exit 1
+    fi
+
     # se il file di archivio non esiste, crea un file vuoto
     if [ ! -f "${folder}"/data/ondate-calore_archivio.csv ]; then
         touch "${folder}"/data/ondate-calore_archivio.csv
