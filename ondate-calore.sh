@@ -43,7 +43,7 @@ else
 fi
 
 # estrai data aggiornamento dichiarata sul sito (informativa, usata nel log correzioni)
-<"${folder}"/processing/output.html scrape -e "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d.+\d' >"${folder}"/processing/check
+<"${folder}"/processing/output.html scrape -be "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d{2}/\d{2}/\d{4}' >"${folder}"/processing/check
 data_versione=$(<"${folder}"/processing/check)
 
 # estrai header
