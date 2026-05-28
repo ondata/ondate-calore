@@ -42,86 +42,114 @@ else
     curl -L -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "$url" -o "${folder}/processing/output.html"
 fi
 
-# estrai data aggiornamento dichiarata sul sito
+# estrai data aggiornamento dichiarata sul sito (informativa, usata nel log correzioni)
 <"${folder}"/processing/output.html scrape -e "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d.+\d' >"${folder}"/processing/check
+data_versione=$(<"${folder}"/processing/check)
 
-# if file ${folder}/processing/check is equal to ${folder}/data/check, then exit
-if cmp -s "${folder}"/processing/check "${folder}"/data/check; then
-    echo "La data di aggiornamento non è cambiata. Lo script verrà interrotto."
-else
-    mv "${folder}"/processing/check "${folder}"/data/check
-    # estrai header
-    <"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.th[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
+# estrai header
+<"${folder}"/processing/output.html scrape -be '//table/thead' | xq -r '.html.body.thead.tr.th[]."#text"' | paste -sd, >"${folder}"/processing/ondate-calore.csv
 
-    # estrai dati
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
-    xq -c '.html.body.tr[] |
-    {
-        name: (
-        if (.td[0].a."#text" != null) then .td[0].a."#text"
-        elif (.td[0].span."#text" != null) then .td[0].span."#text"
-        else null
-        end
-        ),
-        prima: .td[1].span."@class",
-        seconda: .td[2].span."@class",
-        terza: .td[3].span."@class"
-    }' | \
-    mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
+# estrai dati
+<"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
+xq -c '.html.body.tr[] |
+{
+    name: (
+    if (.td[0].a."#text" != null) then .td[0].a."#text"
+    elif (.td[0].span."#text" != null) then .td[0].span."#text"
+    else null
+    end
+    ),
+    prima: .td[1].span."@class",
+    seconda: .td[2].span."@class",
+    terza: .td[3].span."@class"
+}' | \
+mlr --j2c cat | tail -n +2 >>"${folder}"/processing/ondate-calore.csv
 
-    # estrai URL PDF
-    <"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
-    xq -c '.html.body.tr[] |
-    {
-        name: (
-        if (.td[0].a."#text" != null) then .td[0].a."#text"
-        elif (.td[0].span."#text" != null) then .td[0].span."#text"
-        else null
-        end
-        ),
-        URL: (
-        if (.td[0].a."@href" != null) then .td[0].a."@href"
-        else ""
-        end
-        )
-    }' | \
-    mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
+# estrai URL PDF
+<"${folder}"/processing/output.html scrape -be '//table/tbody/tr' | \
+xq -c '.html.body.tr[] |
+{
+    name: (
+    if (.td[0].a."#text" != null) then .td[0].a."#text"
+    elif (.td[0].span."#text" != null) then .td[0].span."#text"
+    else null
+    end
+    ),
+    URL: (
+    if (.td[0].a."@href" != null) then .td[0].a."@href"
+    else ""
+    end
+    )
+}' | \
+mlr --j2c label citta,URL then put '$URL=sub($URL,"http:","https:")' >"${folder}"/data/ondate-calore_PDF.csv
 
-    # URL completo per i PDF
-    mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
+# URL completo per i PDF
+mlr -I --csv put '$URL="https://www.salute.gov.it".$URL' "${folder}"/data/ondate-calore_PDF.csv
 
-    # trasforma struttura dati da wide a long
-    mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data -f citta then put '$data_estrazione="'"$data"'"' >"${folder}"/data/ondate-calore_latest.csv
+# trasforma struttura dati da wide a long → file temporaneo per il confronto
+mlr --csv --from "${folder}"/processing/ondate-calore.csv label citta then reshape -r "[0-9]" -o data,livello then sort -r data -f citta then put '$data_estrazione="'"$data"'"' >"${folder}"/processing/latest_new.csv
 
-    # aggiungi URL PDF
-    mlr --csv join --ul -j citta -f "${folder}"/data/ondate-calore_latest.csv then unsparsify "${folder}"/data/ondate-calore_PDF.csv >"${folder}"/processing/tmp.csv
+# aggiungi URL PDF
+mlr --csv join --ul -j citta -f "${folder}"/processing/latest_new.csv then unsparsify "${folder}"/data/ondate-calore_PDF.csv >"${folder}"/processing/tmp.csv
+mv "${folder}"/processing/tmp.csv "${folder}"/processing/latest_new.csv
 
-    # rinomina il file
-    mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_latest.csv
+# formattare in formato ISO la data
+mlr -I --csv --from "${folder}"/processing/latest_new.csv put '$data=strftime(strptime($data, "%d-%m-%Y"),"%Y-%m-%d")'
 
-    # formattare in formato ISO la data
-    mlr -I --csv --from "${folder}"/data/ondate-calore_latest.csv put '$data=strftime(strptime($data, "%d-%m-%Y"),"%Y-%m-%d")'
+# estrai i livelli come da schema
+mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/processing/latest_new.csv
 
-    # estrai i livelli come da schema
-    mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/data/ondate-calore_latest.csv
-
-    # verifica che il file contenga dati per almeno 27 città distinte
-    n_citta=$(mlr --c2n cut -f citta then uniq -a "${folder}"/data/ondate-calore_latest.csv | wc -l)
-    if [ "$n_citta" -lt 27 ]; then
-        echo "ERRORE: trovate solo $n_citta città (attese 27). Estrazione probabilmente incompleta. Lo script verrà interrotto."
-        exit 1
-    fi
-
-    # se il file di archivio non esiste, crea un file vuoto
-    if [ ! -f "${folder}"/data/ondate-calore_archivio.csv ]; then
-        touch "${folder}"/data/ondate-calore_archivio.csv
-    fi
-
-    # unisci gli ultimi dati con il file di archivio
-    mlr --csv cut -x -f URL then uniq -a then sort -r data -f citta "${folder}"/data/ondate-calore_latest.csv "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/processing/tmp.csv
-    mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_archivio.csv
-
+# verifica che il file contenga dati per almeno 27 città distinte
+n_citta=$(mlr --c2n cut -f citta then uniq -a "${folder}"/processing/latest_new.csv | wc -l)
+if [ "$n_citta" -lt 27 ]; then
+    echo "ERRORE: trovate solo $n_citta città (attese 27). Estrazione probabilmente incompleta. Lo script verrà interrotto."
+    exit 1
 fi
+
+# confronta i nuovi dati (citta+data+livello) con latest.csv esistente: esci se invariati
+dati_invariati=false
+if [ -f "${folder}"/data/ondate-calore_latest.csv ]; then
+    if diff \
+        <(mlr --csv sort -f citta,data then cut -f citta,data,livello "${folder}"/processing/latest_new.csv) \
+        <(mlr --csv sort -f citta,data then cut -f citta,data,livello "${folder}"/data/ondate-calore_latest.csv) \
+        > /dev/null 2>&1; then
+        dati_invariati=true
+    fi
+fi
+
+if [ "$dati_invariati" = true ]; then
+    echo "Dati invariati. Lo script verrà interrotto."
+    mv "${folder}"/processing/check "${folder}"/data/check
+    exit 0
+fi
+
+# logga le correzioni: stessa citta+data con livello cambiato rispetto al latest precedente
+if [ -f "${folder}"/data/ondate-calore_latest.csv ]; then
+    if [ ! -f "${folder}"/data/correzioni.csv ]; then
+        echo "data_rilevazione,versione_sito,citta,data,livello_precedente,livello_nuovo" >"${folder}"/data/correzioni.csv
+    fi
+    mlr --csv join -j citta,data --lp new_ \
+        -f "${folder}"/processing/latest_new.csv \
+        then filter '$new_livello != $livello' \
+        then put '$data_rilevazione="'"$data"'"; $versione_sito="'"$data_versione"'"' \
+        then cut -f data_rilevazione,versione_sito,citta,data,livello,new_livello \
+        then rename livello,livello_precedente,new_livello,livello_nuovo \
+        "${folder}"/data/ondate-calore_latest.csv >>"${folder}"/data/correzioni.csv
+fi
+
+# pubblica il nuovo latest e aggiorna il check
+mv "${folder}"/processing/latest_new.csv "${folder}"/data/ondate-calore_latest.csv
+mv "${folder}"/processing/check "${folder}"/data/check
+
+# se il file di archivio non esiste, crea un file vuoto
+if [ ! -f "${folder}"/data/ondate-calore_archivio.csv ]; then
+    touch "${folder}"/data/ondate-calore_archivio.csv
+fi
+
+# unisci gli ultimi dati con l'archivio: latest.csv è autoritativo per le date che copre
+# sort stabile per data_estrazione desc → uniq per citta+data tiene la riga più recente (latest.csv prima)
+mlr --csv cut -x -f URL then sort -r data_estrazione -f citta,data then uniq -g citta,data then sort -r data -f citta "${folder}"/data/ondate-calore_latest.csv "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/processing/tmp.csv
+mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_archivio.csv
 
 # estrai un CSV, con i dati di oggi, se presenti
 mlr --c2n cut -f data then uniq -a "${folder}"/data/ondate-calore_latest.csv | while read -r line; do
