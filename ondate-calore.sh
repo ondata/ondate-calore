@@ -134,7 +134,7 @@ fi
 
 # unisci gli ultimi dati con l'archivio: latest.csv è autoritativo per le date che copre
 # sort stabile per data_estrazione desc → uniq per citta+data tiene la riga più recente (latest.csv prima)
-mlr --csv cut -x -f URL then sort -r data_estrazione -f citta,data then uniq -g citta,data then sort -r data -f citta "${folder}"/data/ondate-calore_latest.csv "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/processing/tmp.csv
+mlr --csv cut -x -f URL then sort -r data_estrazione -f citta,data then top -n 1 -a -g citta,data -f data_estrazione then sort -r data -f citta "${folder}"/data/ondate-calore_latest.csv "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/processing/tmp.csv
 mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_archivio.csv
 
 # estrai un CSV, con i dati di oggi, se presenti
