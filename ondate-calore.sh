@@ -22,25 +22,11 @@ data=$(date +%Y-%m-%d)
 # url pagina
 url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/"
 
-# scarica la pagina, riprova 5 volte se non ottieni 200
-attempt=1
-max_attempts=5
-while [ $attempt -le $max_attempts ]; do
-    response=$(curl -L --write-out "%{http_code}" --silent --output /dev/null -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "$url")
-    if [ "$response" = "200" ]; then
-        break
-    fi
-    echo "Tentativo $attempt di $max_attempts fallito con codice $response. Attendo 10 secondi..."
-    sleep 10
-    attempt=$((attempt + 1))
-done
-
-if [ "$response" != "200" ]; then
-    echo "La pagina non ha risposto con un codice HTTP 200 dopo $max_attempts tentativi. Lo script verrà interrotto."
-    exit 1
-else
-    curl -L -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" "$url" -o "${folder}/processing/output.html"
-fi
+# scarica la pagina con browser headless (bypassa protezione JS del ministero)
+agent-browser open "$url"
+agent-browser wait --load networkidle
+echo 'document.documentElement.outerHTML' | agent-browser eval --stdin | jq -r . > "${folder}/processing/output.html"
+agent-browser close
 
 # estrai data aggiornamento dichiarata sul sito (informativa, usata nel log correzioni)
 <"${folder}"/processing/output.html scrape -be "//*[contains(text(), 'Ultima Versione Aggiornata')]" | grep -oP '\d{2}/\d{2}/\d{4}' >"${folder}"/processing/check
