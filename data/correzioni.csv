@@ -1,0 +1,13 @@
+data_rilevazione,versione_sito,citta,data,livello_precedente,livello_nuovo
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+ANCONA,2026-05-29,Livello0,Livello1,2026-05-29,29/05/2026
+CATANIA,2026-05-30,Livello1,Livello0,2026-05-29,29/05/2026
+GENOVA,2026-05-29,Livello1,Livello2,2026-05-29,29/05/2026
+MILANO,2026-05-30,Livello1,Livello0,2026-05-29,29/05/2026
+MILANO,2026-05-29,Livello1,Livello0,2026-05-29,29/05/2026
+PALERMO,2026-05-30,Livello1,Livello0,2026-05-29,29/05/2026
+PALERMO,2026-05-29,Livello1,Livello0,2026-05-29,29/05/2026
+TRIESTE,2026-05-30,Livello1,Livello0,2026-05-29,29/05/2026
+TRIESTE,2026-05-29,Livello1,Livello0,2026-05-29,29/05/2026
+VENEZIA,2026-05-30,Livello1,Livello0,2026-05-29,29/05/2026
+VENEZIA,2026-05-29,Livello1,Livello0,2026-05-29,29/05/2026
