@@ -161,13 +161,15 @@ mlr --csv cut -f citta,data,delta_giorno_prima,delta_giorno_dopo "${folder}"/ela
 
 # unisci i dati di oggi con i delta e crea tooltip informativi basati sui cambiamenti di livello
 mlr --csv join --ul -j citta,data -f "${folder}"/data/ondate-calore_oggi.csv then unsparsify then sort -f citta,data then put '
-if($delta_giorno_dopo>0) {
+if(is_null($delta_giorno_dopo)) {
+    $tooltip_domani=""
+} elif ($delta_giorno_dopo>0) {
     $tooltip_domani="👀 <b>Domani</b> si starà peggio ⬆️"
 } elif ($delta_giorno_dopo<0) {
     $tooltip_domani="👀 <b>Domani</b> si starà meglio ⬇️"
 } else {
     $tooltip_domani="👀 <b>Domani</b> sarà come oggi"
-};if(is_null($delta_giorno_dopo)){$tooltip_domani=""}else{$tooltip_domani=$tooltip_domani}
+}
 ' "${folder}"/processing/tmp.csv >"${folder}"/elaborazioni/ondate-calore_oggi.csv
 
 # estrai le coordinate geografiche delle città per il join successivo
