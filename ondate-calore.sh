@@ -83,7 +83,7 @@ mv "${folder}"/processing/tmp.csv "${folder}"/processing/latest_new.csv
 mlr -I --csv --from "${folder}"/processing/latest_new.csv put '$data=strftime(strptime($data, "%d-%m-%Y"),"%Y-%m-%d")'
 
 # estrai i livelli come da schema
-mlr -I --csv put '$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/processing/latest_new.csv
+mlr -I --csv put '$livello=sub($livello, "livello-NA", "livello-0");$livello=regextract_or_else($livello, "livello-\d", "");$livello=sub($livello, "livello-", "Livello")' "${folder}"/processing/latest_new.csv
 
 # verifica che il file contenga dati per almeno 27 città distinte
 n_citta=$(mlr --c2n cut -f citta then uniq -a "${folder}"/processing/latest_new.csv | wc -l)

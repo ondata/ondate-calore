@@ -1,6 +1,6 @@
 citta,data,livello,data_estrazione,URL,name,geonameid,latitude,longitude,admin3code,livello_descrizione,delta_giorno_prima,delta_giorno_dopo,tooltip_domani
 ANCONA,2026-06-01,Livello0,2026-06-01,https://www.salute.gov.it,Ancona,6542126,43.59816,13.51008,042002,Condizioni meteorologiche che non comportano rischi per la salute della popolazione,-1,0,👀 <b>Domani</b> sarà come oggi
-BARI,2026-06-01,,2026-06-01,https://www.salute.gov.it,Bari,6542001,41.11773,16.85119,072006,,(error),(error),👀 <b>Domani</b> si starà meglio ⬇️
+BARI,2026-06-01,Livello0,2026-06-01,https://www.salute.gov.it,Bari,6542001,41.11773,16.85119,072006,Condizioni meteorologiche che non comportano rischi per la salute della popolazione,(error),(error),👀 <b>Domani</b> si starà meglio ⬇️
 BOLOGNA,2026-06-01,Livello0,2026-06-01,https://www.salute.gov.it,Bologna,6541998,44.50657,11.35041,037006,Condizioni meteorologiche che non comportano rischi per la salute della popolazione,-2,0,👀 <b>Domani</b> sarà come oggi
 BOLZANO,2026-06-01,Livello0,2026-06-01,https://www.salute.gov.it,Bolzano/Bozen,6535953,46.49272,11.33358,021008,Condizioni meteorologiche che non comportano rischi per la salute della popolazione,-1,0,👀 <b>Domani</b> sarà come oggi
 BRESCIA,2026-06-01,Livello0,2026-06-01,https://www.salute.gov.it,Brescia,6542113,45.52478,10.22727,017029,Condizioni meteorologiche che non comportano rischi per la salute della popolazione,-2,0,👀 <b>Domani</b> sarà come oggi
