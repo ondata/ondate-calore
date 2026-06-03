@@ -23,8 +23,10 @@ data=$(date +%Y-%m-%d)
 url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/"
 
 # scarica la pagina con browser headless (bypassa protezione JS del ministero)
+# wait 'table' gestisce il redirect Gcore CDN: la tabella esiste solo sulla pagina reale
 agent-browser open "$url"
 agent-browser wait --load networkidle
+agent-browser wait 'table'
 echo 'document.documentElement.outerHTML' | agent-browser eval --stdin | jq -r . > "${folder}/processing/output.html"
 agent-browser close
 
