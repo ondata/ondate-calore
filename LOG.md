@@ -1,5 +1,9 @@
 # LOG.md
 
+## 2026-06-10
+
+- Fix `ondate-calore.sh`: retry con backoff su `agent-browser open`/`wait table`. Il sito ministero (CDN Gcore) risponde a volte con 504 Gateway Time-out facendo fallire la GitHub Action; ora fino a 5 tentativi (attesa 15s, 30s, 45s, 60s).
+
 ## 2026-05-27
 
 - Riattivazione del servizio dopo stop estate 2025.

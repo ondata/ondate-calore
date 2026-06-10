@@ -24,9 +24,25 @@ url="https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ond
 
 # scarica la pagina con browser headless (bypassa protezione JS del ministero)
 # wait 'table' gestisce il redirect Gcore CDN: la tabella esiste solo sulla pagina reale
-agent-browser open "$url"
-agent-browser wait --load networkidle
-agent-browser wait 'table'
+# retry: il sito risponde a volte con 504 Gateway Time-out (CDN Gcore); riprova con backoff
+max_tentativi=5
+tentativo=1
+while true; do
+  if agent-browser open "$url" \
+    && agent-browser wait --load networkidle \
+    && agent-browser wait 'table'; then
+    break
+  fi
+  agent-browser close || true
+  if [ "$tentativo" -ge "$max_tentativi" ]; then
+    echo "ERRORE: pagina non disponibile (es. 504) dopo ${max_tentativi} tentativi" >&2
+    exit 1
+  fi
+  attesa=$((tentativo * 15))
+  echo "tentativo ${tentativo}/${max_tentativi} fallito, ritento tra ${attesa}s" >&2
+  sleep "$attesa"
+  tentativo=$((tentativo + 1))
+done
 echo 'document.documentElement.outerHTML' | agent-browser eval --stdin | jq -r . > "${folder}/processing/output.html"
 agent-browser close
 
