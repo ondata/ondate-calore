@@ -20,3 +20,5 @@ CATANIA,2026-06-03,Livello1,Livello0,2026-06-03,03/06/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 BRESCIA,2026-06-17,Livello1,Livello0,2026-06-16,16/06/2026
 TORINO,2026-06-17,Livello1,Livello0,2026-06-16,16/06/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+TRIESTE,2026-06-19,Livello1,Livello0,2026-06-18,18/06/2026
