@@ -22,3 +22,6 @@ BRESCIA,2026-06-17,Livello1,Livello0,2026-06-16,16/06/2026
 TORINO,2026-06-17,Livello1,Livello0,2026-06-16,16/06/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 TRIESTE,2026-06-19,Livello1,Livello0,2026-06-18,18/06/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CAMPOBASSO,2026-06-20,Livello0,Livello1,2026-06-19,19/06/2026
+GENOVA,2026-06-20,Livello0,Livello1,2026-06-19,19/06/2026
