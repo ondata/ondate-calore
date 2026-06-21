@@ -122,10 +122,14 @@ if [ -f "${folder}"/data/ondate-calore_latest.csv ]; then
 fi
 
 if [ "$dati_invariati" = true ]; then
-    echo "Dati invariati. Lo script verrà interrotto."
+    # Nessun nuovo bollettino (es. weekend/festivi, o più run nello stesso giorno):
+    # non ripubblico latest/archivio, ma proseguo comunque a rigenerare i file
+    # giornalieri (oggi.csv ed elaborazioni), perché "oggi" cambia ogni giorno
+    # anche se il bollettino resta invariato. La previsione per oggi è già in
+    # latest.csv: senza questo, la mappa resterebbe ferma al giorno di emissione.
+    echo "Dati invariati: salto la pubblicazione, rigenero solo i file giornalieri."
     mv "${folder}"/processing/check "${folder}"/data/check
-    exit 0
-fi
+else
 
 # logga le correzioni: stessa citta+data con livello cambiato rispetto al latest precedente
 if [ -f "${folder}"/data/ondate-calore_latest.csv ]; then
@@ -154,6 +158,7 @@ fi
 # sort stabile per data_estrazione desc → uniq per citta+data tiene la riga più recente (latest.csv prima)
 mlr --csv cut -x -f URL then sort -r data_estrazione -f citta,data then top -n 1 -a -g citta,data -f data_estrazione then sort -r data -f citta "${folder}"/data/ondate-calore_latest.csv "${folder}"/data/ondate-calore_archivio.csv >"${folder}"/processing/tmp.csv
 mv "${folder}"/processing/tmp.csv "${folder}"/data/ondate-calore_archivio.csv
+fi
 
 # estrai un CSV, con i dati di oggi, se presenti
 mlr --c2n cut -f data then uniq -a "${folder}"/data/ondate-calore_latest.csv | while read -r line; do
