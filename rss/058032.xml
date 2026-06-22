@@ -5,17 +5,24 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/058032.xml</link>
     <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-21&amp;livello=1</link>
-      <title>CIVITAVECCHIA - 21/06/2026: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-24&amp;livello=1</link>
+      <title>CIVITAVECCHIA - 24/06/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
     <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-20&amp;livello=1</link>
-      <title>CIVITAVECCHIA - 20/06/2026: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-23&amp;livello=1</link>
+      <title>CIVITAVECCHIA - 23/06/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-22&amp;livello=1</link>
+      <title>CIVITAVECCHIA - 22/06/2026: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
