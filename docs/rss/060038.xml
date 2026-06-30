@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/060038.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-07-02&amp;livello=1</link>
+      <title>FROSINONE - 02/07/2026: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-07-01&amp;livello=3</link>
       <title>FROSINONE - 01/07/2026: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
@@ -16,13 +23,6 @@
       <title>FROSINONE - 30/06/2026: livello 3, rosso</title>
       <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
       <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-06-29&amp;livello=3</link>
-      <title>FROSINONE - 29/06/2026: livello 3, rosso</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
-      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <category>Livello 3</category>
     </item>
   </channel>
