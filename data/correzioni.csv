@@ -36,3 +36,6 @@ BOLZANO,2026-07-01,Livello1,Livello3,2026-06-30,30/06/2026
 NAPOLI,2026-07-01,Livello1,Livello3,2026-06-30,30/06/2026
 TORINO,2026-07-01,Livello1,Livello3,2026-06-30,30/06/2026
 VITERBO,2026-07-01,Livello1,Livello3,2026-06-30,30/06/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+MESSINA,2026-07-01,Livello2,Livello1,2026-07-01,01/07/2026
+NAPOLI,2026-07-01,Livello3,Livello1,2026-07-01,01/07/2026
