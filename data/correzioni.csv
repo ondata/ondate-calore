@@ -64,3 +64,6 @@ MESSINA,2026-07-08,Livello1,Livello0,2026-07-07,07/07/2026
 MESSINA,2026-07-07,Livello1,Livello0,2026-07-07,07/07/2026
 REGGIO CALABRIA,2026-07-08,Livello1,Livello0,2026-07-07,07/07/2026
 REGGIO CALABRIA,2026-07-07,Livello1,Livello0,2026-07-07,07/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CAGLIARI,2026-07-08,Livello1,Livello0,2026-07-08,08/07/2026
+VITERBO,2026-07-08,Livello1,Livello0,2026-07-08,08/07/2026
