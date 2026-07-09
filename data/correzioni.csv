@@ -67,3 +67,10 @@ REGGIO CALABRIA,2026-07-07,Livello1,Livello0,2026-07-07,07/07/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 CAGLIARI,2026-07-08,Livello1,Livello0,2026-07-08,08/07/2026
 VITERBO,2026-07-08,Livello1,Livello0,2026-07-08,08/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CAGLIARI,2026-07-09,Livello1,Livello0,2026-07-09,09/07/2026
+CAMPOBASSO,2026-07-09,Livello0,Livello1,2026-07-09,09/07/2026
+FROSINONE,2026-07-10,Livello0,Livello1,2026-07-09,09/07/2026
+LATINA,2026-07-10,Livello0,Livello1,2026-07-09,09/07/2026
+PALERMO,2026-07-10,Livello1,Livello0,2026-07-09,09/07/2026
+ROMA,2026-07-10,Livello1,Livello2,2026-07-09,09/07/2026
