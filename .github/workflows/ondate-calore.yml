@@ -62,8 +62,22 @@ jobs:
         git commit -m "aggiornamento bollettino: ${timestamp}" || exit 0
         git push
 
-    - name: Attendi 10 secondi e aggiorna Datawrapper
+    - name: Attendi 10 secondi, aggiorna e ripubblica Datawrapper
+      env:
+        DW_TOKEN: ${{ secrets.ANDY_DATAWRAPPER_TOKEN_CHART_UPDATE }}
+        DW_CHART: elo50
       run: |
         sleep 10
-        curl -X POST "https://api.datawrapper.de/v3/charts/elo50/data/refresh" \
-          -H "Authorization: Bearer ${{ secrets.ANDY_DATAWRAPPER_TOKEN_CHART_UPDATE }}"
+
+        # 1) refresh: ricarica i dati esterni nell'editor della mappa
+        #    -f fa fallire su HTTP >=400 (token scaduto/errori), -sS mostra il messaggio
+        echo "Refresh dati mappa ${DW_CHART}..."
+        curl -fsS -X POST "https://api.datawrapper.de/v3/charts/${DW_CHART}/data/refresh" \
+          -H "Authorization: Bearer ${DW_TOKEN}"
+        echo
+
+        # 2) publish: senza questo la mappa pubblica NON cambia (resta all'ultima versione)
+        echo "Pubblico mappa ${DW_CHART}..."
+        curl -fsS -X POST "https://api.datawrapper.de/v3/charts/${DW_CHART}/publish" \
+          -H "Authorization: Bearer ${DW_TOKEN}"
+        echo
