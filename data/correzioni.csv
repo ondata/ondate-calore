@@ -94,3 +94,7 @@ PALERMO,2026-07-14,Livello2,Livello1,2026-07-14,14/07/2026
 PESCARA,2026-07-14,Livello2,Livello1,2026-07-14,14/07/2026
 TRIESTE,2026-07-15,Livello1,Livello2,2026-07-14,14/07/2026
 VERONA,2026-07-14,Livello1,Livello2,2026-07-14,14/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+TRIESTE,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
+VENEZIA,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
+VERONA,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
