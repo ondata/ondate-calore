@@ -98,3 +98,12 @@ citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 TRIESTE,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
 VENEZIA,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
 VERONA,2026-07-16,Livello1,Livello2,2026-07-15,15/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+ANCONA,2026-07-16,Livello2,Livello1,2026-07-16,16/07/2026
+BARI,2026-07-17,Livello2,Livello1,2026-07-16,16/07/2026
+CATANIA,2026-07-17,Livello2,Livello1,2026-07-16,16/07/2026
+CATANIA,2026-07-16,Livello2,Livello1,2026-07-16,16/07/2026
+CIVITAVECCHIA,2026-07-16,Livello2,Livello1,2026-07-16,16/07/2026
+REGGIO CALABRIA,2026-07-17,Livello2,Livello1,2026-07-16,16/07/2026
+VENEZIA,2026-07-16,Livello2,Livello1,2026-07-16,16/07/2026
+VERONA,2026-07-17,Livello2,Livello1,2026-07-16,16/07/2026
