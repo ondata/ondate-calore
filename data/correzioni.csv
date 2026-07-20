@@ -123,3 +123,5 @@ ANCONA,2026-07-18,Livello2,Livello1,2026-07-18,18/07/2026
 BRESCIA,2026-07-18,Livello1,Livello3,2026-07-18,18/07/2026
 MILANO,2026-07-18,Livello1,Livello3,2026-07-18,18/07/2026
 TRIESTE,2026-07-19,Livello0,Livello1,2026-07-18,18/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CAGLIARI,2026-07-20,Livello2,Livello1,2026-07-20,20/07/2026
