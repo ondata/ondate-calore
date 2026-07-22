@@ -127,3 +127,9 @@ citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 CAGLIARI,2026-07-20,Livello2,Livello1,2026-07-20,20/07/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 NAPOLI,2026-07-22,Livello1,Livello3,2026-07-21,21/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CAGLIARI,2026-07-23,Livello3,Livello1,2026-07-22,22/07/2026
+CIVITAVECCHIA,2026-07-23,Livello0,Livello1,2026-07-22,22/07/2026
+FIRENZE,2026-07-22,Livello0,Livello1,2026-07-22,22/07/2026
+LATINA,2026-07-23,Livello0,Livello1,2026-07-22,22/07/2026
+PESCARA,2026-07-22,Livello0,Livello1,2026-07-22,22/07/2026
