@@ -136,3 +136,6 @@ PESCARA,2026-07-22,Livello0,Livello1,2026-07-22,22/07/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 CAGLIARI,2026-07-29,Livello1,Livello0,2026-07-28,28/07/2026
 CAGLIARI,2026-07-28,Livello1,Livello0,2026-07-28,28/07/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CATANIA,2026-07-31,Livello2,Livello1,2026-07-30,30/07/2026
+GENOVA,2026-07-31,Livello2,Livello1,2026-07-30,30/07/2026
