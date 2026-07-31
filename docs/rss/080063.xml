@@ -5,6 +5,13 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/080063.xml</link>
     <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-02&amp;livello=1</link>
+      <title>REGGIO CALABRIA - 02/08/2026: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-01&amp;livello=1</link>
       <title>REGGIO CALABRIA - 01/08/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
@@ -16,13 +23,6 @@
       <title>REGGIO CALABRIA - 31/07/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
       <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
-      <category>Livello 1</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-07-30&amp;livello=1</link>
-      <title>REGGIO CALABRIA - 30/07/2026: livello 1, giallo</title>
-      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
   </channel>
