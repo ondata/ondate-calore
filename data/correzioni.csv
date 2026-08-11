@@ -149,3 +149,6 @@ ANCONA,2026-08-10,Livello1,Livello3,2026-08-10,10/08/2026
 TRIESTE,2026-08-10,Livello1,Livello2,2026-08-10,10/08/2026
 VENEZIA,2026-08-10,Livello1,Livello2,2026-08-10,10/08/2026
 VERONA,2026-08-10,Livello1,Livello2,2026-08-10,10/08/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+BRESCIA,2026-08-12,Livello1,Livello3,2026-08-11,11/08/2026
+CAGLIARI,2026-08-12,Livello2,Livello1,2026-08-11,11/08/2026

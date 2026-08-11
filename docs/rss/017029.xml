@@ -5,24 +5,24 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/017029.xml</link>
     <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-12&amp;livello=3</link>
-      <title>BRESCIA - 12/08/2026: livello 3, rosso</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-13&amp;livello=1</link>
+      <title>BRESCIA - 13/08/2026: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Livello 1</category>
+    </item>
+    <item>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-12&amp;livello=1</link>
+      <title>BRESCIA - 12/08/2026: livello 1, giallo</title>
+      <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
+      <category>Livello 1</category>
     </item>
     <item>
       <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-11&amp;livello=2</link>
       <title>BRESCIA - 11/08/2026: livello 2, arancione</title>
       <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
       <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
-      <category>Livello 2</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-10&amp;livello=2</link>
-      <title>BRESCIA - 10/08/2026: livello 2, arancione</title>
-      <description>Temperature elevate e condizioni meteorologiche che possono avere effetti negativi sulla salute della popolazione, in particolare nei sottogruppi di popolazione suscettibili</description>
-      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
       <category>Livello 2</category>
     </item>
   </channel>
