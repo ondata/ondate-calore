@@ -5,25 +5,18 @@
     <description>Per gli aggiornamenti su condizioni non buone</description>
     <link>https://ondata.github.io/ondate-calore/rss/082053.xml</link>
     <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-16&amp;livello=1</link>
-      <title>PALERMO - 16/08/2026: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-19&amp;livello=1</link>
+      <title>PALERMO - 19/08/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
     </item>
     <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-15&amp;livello=1</link>
-      <title>PALERMO - 15/08/2026: livello 1, giallo</title>
+      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-17&amp;livello=1</link>
+      <title>PALERMO - 17/08/2026: livello 1, giallo</title>
       <description>Pre-allerta. Condizioni meteorologiche che possono precedere il verificarsi di un'ondata di calore</description>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
       <category>Livello 1</category>
-    </item>
-    <item>
-      <link>https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0/?tema=Ondate+di+calore&amp;data=2026-08-14&amp;livello=3</link>
-      <title>PALERMO - 14/08/2026: livello 3, rosso</title>
-      <description>Ondata di calore. Condizioni ad elevato rischio che persistono per 3 o più giorni consecutivi</description>
-      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
-      <category>Livello 3</category>
     </item>
   </channel>
 </rss>
