@@ -156,3 +156,9 @@ citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 PESCARA,2026-08-14,Livello1,Livello0,2026-08-13,13/08/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 PESCARA,2026-08-14,Livello0,Livello1,2026-08-14,14/08/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+ANCONA,2026-08-19,Livello2,Livello1,2026-08-18,18/08/2026
+BOLZANO,2026-08-19,Livello0,Livello1,2026-08-18,18/08/2026
+FROSINONE,2026-08-18,Livello0,Livello1,2026-08-18,18/08/2026
+RIETI,2026-08-19,Livello1,Livello2,2026-08-18,18/08/2026
+VITERBO,2026-08-19,Livello0,Livello1,2026-08-18,18/08/2026
