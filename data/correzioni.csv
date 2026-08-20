@@ -166,3 +166,6 @@ citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 PALERMO,2026-08-20,Livello2,Livello1,2026-08-19,19/08/2026
 REGGIO CALABRIA,2026-08-20,Livello1,Livello0,2026-08-19,19/08/2026
 VERONA,2026-08-20,Livello0,Livello1,2026-08-19,19/08/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+ANCONA,2026-08-21,Livello0,Livello1,2026-08-20,20/08/2026
+FIRENZE,2026-08-20,Livello2,Livello1,2026-08-20,20/08/2026
