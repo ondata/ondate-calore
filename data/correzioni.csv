@@ -193,3 +193,8 @@ FROSINONE,2026-08-26,Livello1,Livello0,2026-08-26,26/08/2026
 MESSINA,2026-08-26,Livello2,Livello1,2026-08-26,26/08/2026
 PERUGIA,2026-08-27,Livello2,Livello1,2026-08-26,26/08/2026
 ROMA,2026-08-26,Livello2,Livello1,2026-08-26,26/08/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+BOLZANO,2026-08-28,Livello2,Livello1,2026-08-27,27/08/2026
+FROSINONE,2026-08-27,Livello2,Livello1,2026-08-27,27/08/2026
+MILANO,2026-08-28,Livello1,Livello0,2026-08-27,27/08/2026
+NAPOLI,2026-08-28,Livello2,Livello1,2026-08-27,27/08/2026
