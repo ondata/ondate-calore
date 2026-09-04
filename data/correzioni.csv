@@ -239,3 +239,7 @@ CATANIA,2026-09-04,Livello1,Livello0,2026-09-03,03/09/2026
 CATANIA,2026-09-03,Livello1,Livello0,2026-09-03,03/09/2026
 FIRENZE,2026-09-04,Livello1,Livello0,2026-09-03,03/09/2026
 FIRENZE,2026-09-03,Livello1,Livello0,2026-09-03,03/09/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+CIVITAVECCHIA,2026-09-05,Livello1,Livello0,2026-09-04,04/09/2026
+FROSINONE,2026-09-05,Livello1,Livello0,2026-09-04,04/09/2026
+VENEZIA,2026-09-05,Livello1,Livello0,2026-09-04,04/09/2026
