@@ -249,3 +249,6 @@ CAMPOBASSO,2026-09-08,Livello2,Livello1,2026-09-08,08/09/2026
 PERUGIA,2026-09-08,Livello2,Livello1,2026-09-08,08/09/2026
 REGGIO CALABRIA,2026-09-09,Livello0,Livello1,2026-09-08,08/09/2026
 RIETI,2026-09-08,Livello1,Livello0,2026-09-08,08/09/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+BARI,2026-09-09,Livello2,Livello1,2026-09-09,09/09/2026
+PESCARA,2026-09-09,Livello0,Livello1,2026-09-09,09/09/2026
