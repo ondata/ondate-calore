@@ -254,3 +254,5 @@ BARI,2026-09-09,Livello2,Livello1,2026-09-09,09/09/2026
 PESCARA,2026-09-09,Livello0,Livello1,2026-09-09,09/09/2026
 citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
 PALERMO,2026-09-10,Livello1,Livello0,2026-09-10,10/09/2026
+citta,data,livello_nuovo,livello_precedente,data_rilevazione,versione_sito
+PALERMO,2026-09-11,Livello1,Livello0,2026-09-11,11/09/2026
